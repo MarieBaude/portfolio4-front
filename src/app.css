@@ -1,39 +1,27 @@
-body {
-  font-family: Gordita, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
 }
 
-a {
-  margin-right: 1rem;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-main {
-  text-align: center;
-  padding: 1em;
-  margin: 0 auto;
+a, button {
+  cursor: revert;
 }
 
-h1 {
-  color: #335d92;
-  text-transform: uppercase;
-  font-size: 4rem;
-  font-weight: 100;
-  line-height: 1.1;
-  margin: 4rem auto;
-  max-width: 14rem;
+ol, ul, menu {
+  list-style: none;
 }
 
-p {
-  max-width: 14rem;
-  margin: 2rem auto;
-  line-height: 1.35;
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
 }
 
-@media (min-width: 480px) {
-  h1 {
-    max-width: none;
-  }
-
-  p {
-    max-width: none;
-  }
+table {
+  border-collapse: collapse;
 }
