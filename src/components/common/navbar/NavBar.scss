@@ -1,3 +1,15 @@
 a {
-    color: red;
+    color: blue;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: aquamarine;
+    ul {
+        display: flex;
+        li {
+            margin-right: 1rem;
+        }
+    }
 }
