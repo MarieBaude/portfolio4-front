@@ -1,4 +1,4 @@
-const Bar = () => {
+export default function Bar() {
     return ( 
         <section>
             <div>
@@ -13,5 +13,3 @@ const Bar = () => {
         </section>
      );
 }
- 
-export default Bar;
