@@ -2,7 +2,7 @@ import { MetaProvider, Title } from "@solidjs/meta";
 import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
 import { Suspense } from "solid-js";
-import "./app.css";
+import '~/styles/main.scss';
 import NavBar from './components/common/navbar/NavBar';
 import Footer from './components/common/footer/Footer';
 

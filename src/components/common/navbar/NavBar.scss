@@ -1,15 +1,18 @@
-a {
-    color: blue;
-}
-
 nav {
     display: flex;
     justify-content: space-around;
-    background-color: aquamarine;
+    color: var(--color-text);
+    margin-top: 2rem;
     ul {
         display: flex;
         li {
             margin-right: 1rem;
         }
+    }
+
+    div {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
     }
 }

@@ -3,8 +3,8 @@ import { Title } from "@solidjs/meta";
 export default function Experience() {
   return (
     <main>
-      <Title>Experience</Title>
-      <h1>Experience</h1>
+      <Title>Parcours</Title>
+      <h1>Parcours</h1>
     </main>
   );
 }

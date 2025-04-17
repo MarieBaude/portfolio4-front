@@ -1,0 +1,18 @@
+:root {
+// [data-theme="dark"] {
+    --color-primary: #2A2A4A;
+    --color-secondary: #3D3D6E;
+    --color-tertiary: #A0A0C0;
+    --color-quaternary: #1A1A2E;
+    --color-action: #3BBA9C;
+    --color-text: #E0E0E0;
+}
+
+[data-theme="light"] {
+    --color-primary: #edf2f4;
+    --color-secondary: #8d99ae;
+    --color-tertiary: #2b2d42;
+    --color-quaternary: #4a4e69;
+    --color-action: #d90429;
+    --color-text: #2b2d42;
+}

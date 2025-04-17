@@ -1,4 +1,33 @@
 footer {
-    background-color: yellowgreen;
+    background-color: var(--color-quaternary);
     padding: 2rem;
+    color: #707793;
+
+    .legal_text {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .social_media {
+        display: flex;
+        justify-content: center;
+        color: var(--color-action);
+
+        li {
+            margin-right: 0.5rem;
+        }
+    }
+
+    span {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    hr {
+        height: 1px;
+        background-color: var(--color-tertiary);
+        margin: 2rem 0;
+    }
 }
