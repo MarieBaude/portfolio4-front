@@ -1,0 +1,7 @@
+@mixin btn-base {
+    background-color: var(--color-action);
+    padding: 0.5rem 1rem;
+    color: black;
+    font-size: 1.3rem;
+    border-radius: 1rem;
+}

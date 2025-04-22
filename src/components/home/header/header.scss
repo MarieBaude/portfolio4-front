@@ -1,3 +1,5 @@
+@use '../../../styles/mixins' as *;
+
 header {
     display: flex;
     justify-content: center;
@@ -14,12 +16,6 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--color-text);
-
-    h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
 
     span {
         font-size: 1.3rem;
@@ -27,10 +23,6 @@ header {
     }
 
     button {
-        background-color: var(--color-action);
-        padding: 0.5rem 1rem;
-        color: black;
-        font-size: 1.3rem;
-        border-radius: 1rem;
+        @include btn-base;
     }
 }

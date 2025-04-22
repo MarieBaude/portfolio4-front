@@ -6,3 +6,16 @@ body {
       );
 
 }
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+span, p, div {
+    color: var(--color-text);
+}
