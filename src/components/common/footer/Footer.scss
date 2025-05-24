@@ -1,33 +1,33 @@
 footer {
-    background-color: var(--color-quaternary);
-    padding: 2rem;
-    color: #707793;
+  background-color: var(--color-quaternary);
+  padding: 2rem;
+  color: var(--color-tertiary);
 
-    .legal_text {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        margin-bottom: 1rem;
+  .legal_text {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .social_media {
+    display: flex;
+    justify-content: center;
+    color: var(--color-action);
+
+    li {
+      margin-right: 0.5rem;
     }
+  }
 
-    .social_media {
-        display: flex;
-        justify-content: center;
-        color: var(--color-action);
+  span {
+    display: flex;
+    justify-content: flex-end;
+  }
 
-        li {
-            margin-right: 0.5rem;
-        }
-    }
-
-    span {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    hr {
-        height: 1px;
-        background-color: var(--color-tertiary);
-        margin: 2rem 0;
-    }
+  hr {
+    height: 1px;
+    background-color: var(--color-tertiary);
+    margin: 2rem 0;
+  }
 }
