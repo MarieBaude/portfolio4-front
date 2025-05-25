@@ -1,18 +1,27 @@
 nav {
+  display: flex;
+  justify-content: space-around;
+  color: var(--color-text);
+  margin-top: 2rem;
+  ul {
     display: flex;
-    justify-content: space-around;
-    color: var(--color-text);
-    margin-top: 2rem;
-    ul {
-        display: flex;
-        li {
-            margin-right: 1rem;
-        }
+    align-items: center;
+    li {
+      margin-right: 1rem;
     }
+  }
 
-    div {
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-    }
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.subMenu {
+  display: flex;
+  align-items: center;
+  a {
+    margin-right: 0.3rem;
+  }
 }

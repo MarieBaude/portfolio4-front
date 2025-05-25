@@ -1,5 +1,5 @@
 import { About, Hobbit } from "./about.types";
-import { BookIcon, HeadphonesIcon, MouseIcon } from "./icons";
+import { BookIcon, HeadphonesIcon, MouseIcon } from "../icons";
 
 export const ABOUT: About[] = [
   {
