@@ -9,7 +9,7 @@ interface ProgressBarProps {
 export default function ProgressBar(props: ProgressBarProps) {
   return (
     <div class="progress_bar">
-      <A href={`/skills/${props.skill.title}`}>
+      <A href={`/skills/${props.skill.id}`}>
         <div class="logo_title">
           <img
             src={props.skill.icon}

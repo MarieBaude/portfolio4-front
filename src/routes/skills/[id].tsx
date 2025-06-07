@@ -1,21 +1,19 @@
 import { Title } from "@solidjs/meta";
+import { useParams } from "@solidjs/router";
+import Skill from "~/components/skills/skill/skill";
 
 import { SKILLS_DATA } from "~/data/skills/skills.data";
 
 export default function SkillCard() {
+  const params = useParams();
+  const skill = () =>
+    SKILLS_DATA.find((skill) => skill.id === Number(params.id));
 
   return (
     <main>
-      <Title>{SKILLS_DATA[0].title}</Title> 
-      <h1>{SKILLS_DATA[0].title}</h1> 
+      <Title>{skill()?.title}</Title>
 
-       {/* Définition  */}
-
-       {/* Preuves */}
-
-       {/* Auto citique */}
-
-       {/* Evolution */}
+      {skill() ? <Skill /> : <p>Compétence non trouvée</p>}
     </main>
   );
 }

@@ -1,0 +1,27 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  .container {
+    width: 80%;
+    max-width: 1600px;
+    margin-top: 2rem;
+  }
+}
+
+.def_section {
+  display: flex;
+  align-items: center;
+  .def_text {
+  }
+}
+
+img {
+  width: 15rem;
+  height: 15rem;
+}
+
+h2 {
+  margin-top: 2rem;
+}

@@ -3,11 +3,31 @@ nav {
   justify-content: space-around;
   color: var(--color-text);
   margin-top: 2rem;
+  position: relative;
+
   ul {
     display: flex;
     align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
     li {
-      margin-right: 1rem;
+      margin-right: 1.5rem;
+      position: relative;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.3s ease;
+
+        &:hover {
+          background-color: var(--color-tertiary);
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          color: var(--color-primary);
+        }
+      }
     }
   }
 
@@ -21,7 +41,50 @@ nav {
 .subMenu {
   display: flex;
   align-items: center;
+  position: relative;
+
   a {
     margin-right: 0.3rem;
+  }
+
+  .icon {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover .icon {
+    transform: rotate(180deg);
+  }
+
+  .sub-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--color-tertiary);
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+
+    li {
+      margin: 0;
+      padding: 0.5rem 1rem;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+
+  &:hover .sub-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 }

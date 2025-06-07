@@ -5,4 +5,7 @@ export interface Skill {
   icon: string;
   level: number;
   color: string;
+  def: string;
+  crit: string;
+  evol: string;
 }
