@@ -1,5 +1,7 @@
 main {
   margin: 5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .projectCard {
@@ -8,6 +10,7 @@ main {
   justify-content: center;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  width: 55%;
 
   .oneCard {
     position: relative;

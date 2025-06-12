@@ -4,11 +4,11 @@ import { ABOUT, HOBBIT } from "~/data/about/about.data";
 
 export default function About() {
   return (
-    <main>
+    <main class="aboutMain">
       <Title>A propos</Title>
       {/* <h1>A propos</h1> */}
 
-      <div class="t">
+      <div>
         <div class="sectionPresentation">
           <div class="mainText">
             <h2>{ABOUT[0].title}</h2>
