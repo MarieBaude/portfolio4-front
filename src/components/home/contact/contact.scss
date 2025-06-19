@@ -1,33 +1,33 @@
-@use '../../../styles/mixins'as *;
+@use "../../../styles/mixins" as *;
 
 .contact_content {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  color: var(--color-text);
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  form {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2rem 0;
-    color: var(--color-text);
+    flex-direction: column;
 
-    h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
+    input,
+    textarea {
+      background-color: var(--color-quaternary);
+      border: none;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
     }
 
-    form {
-        display: flex;
-        flex-direction: column;
-
-        input, textarea {
-            background-color: var(--color-quaternary);
-            border: none;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        button {
-            @include btn-base;
-        }
+    button {
+      @include btn-base;
     }
-
+  }
 }
