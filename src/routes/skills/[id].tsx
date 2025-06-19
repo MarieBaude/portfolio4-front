@@ -10,10 +10,10 @@ export default function SkillCard() {
     SKILLS_DATA.find((skill) => skill.id === Number(params.id));
 
   return (
-    <main>
+    <>
       <Title>{skill()?.title}</Title>
 
       {skill() ? <Skill /> : <p>Compétence non trouvée</p>}
-    </main>
+    </>
   );
 }

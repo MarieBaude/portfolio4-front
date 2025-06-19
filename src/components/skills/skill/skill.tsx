@@ -8,13 +8,13 @@ export default function Skill() {
     SKILLS_DATA.find((skill) => skill.id === Number(params.id));
 
   return (
-    <div class="main">
-      <div class="container">
+    <div class="skillContent">
+      <div class="skillContainer">
         {/* <h1>{skill()?.title}</h1> */}
 
         {/* Définition */}
         <div class="def_section">
-          <img src={skill()?.icon} alt={skill()?.title} />
+          <img src={skill()?.icon} class="skillIcon" alt={skill()?.title} />
           <div class="def_text">
             <h2>Ma définition</h2>
             <p>{skill()?.def}</p>

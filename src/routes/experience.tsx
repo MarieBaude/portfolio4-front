@@ -4,11 +4,11 @@ import { TIMELINE_DATA } from "~/data/experience/experience.data";
 
 export default function Experience() {
   return (
-    <main>
+    <div>
       <Title>Parcours</Title>
       {/* <h1>Parcours</h1> */}
 
       <Timeline items={TIMELINE_DATA} />
-    </main>
+    </div>
   );
 }

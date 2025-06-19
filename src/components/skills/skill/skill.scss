@@ -1,27 +1,26 @@
-// .main {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   width: 100%;
-//   .container {
-//     width: 80%;
-//     max-width: 1600px;
-//     margin-top: 2rem;
-//   }
-// }
+.skillContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5rem;
+  .skillContainer {
+    width: 80%;
+    max-width: 1600px;
+    margin-top: 2rem;
+  }
+}
 
-// .def_section {
-//   display: flex;
-//   align-items: center;
-//   .def_text {
-//   }
-// }
+.def_section {
+  display: flex;
+  align-items: center;
+}
 
-// img {
-//   width: 15rem;
-//   height: 15rem;
-// }
+.skillIcon {
+  width: 15rem;
+  height: 15rem;
+}
 
-// h2 {
-//   margin-top: 2rem;
-// }
+h2 {
+  margin-top: 2rem;
+}
