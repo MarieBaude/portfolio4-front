@@ -24,3 +24,16 @@
 h2 {
   margin-top: 2rem;
 }
+
+.projectCardInSkill {
+  margin-bottom: 2rem;
+  display: flex;
+  &.alternate {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+  .projectTextInSkill {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
