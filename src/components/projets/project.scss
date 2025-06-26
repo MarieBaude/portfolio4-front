@@ -1,0 +1,78 @@
+@use "../../styles/mixins" as *;
+
+body,
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.projectText {
+  margin: 1rem;
+}
+
+.listLi {
+  list-style-type: disc;
+  padding-left: 0.3rem;
+}
+
+.imageSection {
+  background-color: var(--color-quaternary);
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  position: relative;
+  left: 50%;
+  margin-left: -67vw;
+
+  .headerSkill {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    justify-content: center;
+
+    .tagsList {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+
+      .tag {
+        color: white;
+        background-color: var(--color-tertiary);
+        padding: 0.5rem;
+        border-radius: 1rem;
+        margin-right: 0.5rem;
+      }
+    }
+
+    .headerSummary {
+      font-size: large;
+    }
+  }
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    .skill-icon {
+      width: 5rem;
+      height: 5rem;
+    }
+    .titleSkill {
+      font-size: larger;
+      margin-top: 0.5rem;
+    }
+  }
+  .buttonStyle {
+    @include btn-base;
+    margin-top: 0.5rem;
+  }
+}

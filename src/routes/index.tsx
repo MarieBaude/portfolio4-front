@@ -1,11 +1,15 @@
 import { Title } from "@solidjs/meta";
-import Counter from "~/components/Counter";
+import Header from "~/components/home/header/header";
+import Contact from "../components/home/contact/contact";
+import Bar from "../components/home/bar/bar";
 
 export default function Home() {
   return (
-    <main>
-      <Title>Home</Title>
-      <h1>Home</h1> 
-    </main>
+    <div>
+      <Title>Accueil</Title>
+      <Header />
+      <Bar />
+      <Contact />
+    </div>
   );
 }
