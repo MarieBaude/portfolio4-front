@@ -1,0 +1,35 @@
+.photo {
+  height: 23rem;
+}
+
+.presentation {
+  display: flex;
+  margin-bottom: 5rem;
+  .mainText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3rem;
+    hr {
+      margin-bottom: 1rem;
+      width: 5rem;
+    }
+  }
+}
+
+.para {
+  margin-bottom: 2rem;
+}
+
+.hobbit {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  .oneHobbit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
