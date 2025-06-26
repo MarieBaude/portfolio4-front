@@ -5,7 +5,7 @@ export default function Contact() {
     <section class="contact_content">
       <div>
         <h2>Contact</h2>
-        <form name="contact" netlify>
+        <form name="contact" method="post" data-netlify="true">
           <input type="text" placeholder="Nom" required />
           <input type="email" placeholder="Email" required />
           <textarea placeholder="Message" required></textarea>
