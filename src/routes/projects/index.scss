@@ -4,17 +4,20 @@
   flex-wrap: wrap;
 
   .oneCard {
-    position: relative;
     width: 50%;
     padding: 1rem;
     img {
       height: 100%;
       width: 100%;
     }
+
+    .test {
+      position: relative;
+    }
   }
 }
 
-.projectText {
+.projectCardText {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -42,6 +45,6 @@
   }
 }
 
-.test:hover .projectText {
+.test:hover .projectCardText {
   height: 100%;
 }

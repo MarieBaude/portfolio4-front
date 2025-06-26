@@ -19,7 +19,7 @@ export default function Projects() {
                   alt={`Présentation ${project.title}`}
                   class="projectImage"
                 />
-                <div class="projectText">
+                <div class="projectCardText">
                   <h3>{project.title}</h3>
                   <p>{project.summary}</p>
                   <div class="projectTags">

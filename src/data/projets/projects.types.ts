@@ -12,4 +12,5 @@ export interface Project {
   company: string;
   next: string;
   crit: string;
+  skillIds: number[];
 }

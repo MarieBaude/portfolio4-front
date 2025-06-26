@@ -6,7 +6,7 @@ import Bar from "../components/home/bar/bar";
 export default function Home() {
   return (
     <div>
-      <Title>Home</Title>
+      <Title>Accueil</Title>
       <Header />
       <Bar />
       <Contact />

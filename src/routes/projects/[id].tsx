@@ -18,7 +18,7 @@ export default function ProjectCard() {
 
   return (
     <>
-      <Title>Project Details</Title>
+      <Title>{project()?.title}</Title>
       {project() ? <Project /> : <p>Projet non trouvée</p>}
     </>
   );

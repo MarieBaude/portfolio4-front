@@ -8,4 +8,5 @@ export interface Skill {
   def: string;
   crit: string;
   evol: string;
+  projectIds: number[];
 }
