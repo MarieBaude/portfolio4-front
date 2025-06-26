@@ -11,7 +11,7 @@ export default function Skill() {
 
   const relatedProjects = () =>
     PROJECTS_DATA.filter((project) =>
-      project.skillIds?.includes(Number(params.id))
+      skill()?.projectIds?.includes(project.id)
     );
 
   return (
@@ -31,19 +31,20 @@ export default function Skill() {
         {/* Preuves */}
         <h2>Mes éléments de preuve</h2>
         <For each={relatedProjects()}>
-          {(project) => (
-            <A href={`/projects/${project.id}`} class="project-card">
+          {(project, index) => (
+            <A
+              href={`/projects/${project.id}`}
+              class="projectCardInSkill"
+              classList={{ alternate: index() % 2 !== 0 }}
+            >
               <img
                 src={project.mainImage}
                 alt={project.title}
-                class="project-image"
+                class="projectImageInSkill"
               />
-              <h3>{project.title}</h3>
-              <p>{project.summary}</p>
-              <div class="project-tags">
-                <For each={project.tags?.slice(0, 3)}>
-                  {(tag) => <span>#{tag}</span>}
-                </For>
+              <div class="projectTextInSkill">
+                <h3>{project.title}</h3>
+                <p>{project.summary}</p>
               </div>
             </A>
           )}
