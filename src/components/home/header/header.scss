@@ -1,8 +1,15 @@
-@use "../../../styles/mixins" as *;
+@use "../../../styles/mixins"as *;
 
 .headerContainer {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1028px) {
+    display: block;
+    img {
+      display: none;
+    }
+  }
 }
 
 .headerContent {

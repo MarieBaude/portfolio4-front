@@ -30,4 +30,11 @@
       @include btn-base;
     }
   }
+
+   @media (max-width: 1028px) {
+    display: block;
+    img {
+      display: none;
+    }
+  }
 }
