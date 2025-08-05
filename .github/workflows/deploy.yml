@@ -12,46 +12,31 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
-      
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          
       - run: npm ci
       - run: npm run build
 
-      - name: Debug build output
+      # Étape CRITIQUE - Trouve le vrai dossier
+      - name: Locate Real Build Output
+        id: find_output
         run: |
-          ls -R .output || true
-          ls -R .out || true
-          ls -R dist || true
-
-      - name: Prepare Artifacts
-        run: |
-          mkdir -p ./deploy
-          
-          if [ -d "./.output/public" ]; then
-            echo "Using .output/public structure"
-            cp -R ./.output/public/* ./deploy/
-          elif [ -d "./.out/public" ]; then
-            echo "Using .out/public structure"
-            cp -R ./.out/public/* ./deploy/
-          elif [ -d "./dist" ]; then
-            echo "Using dist structure"
-            cp -R ./dist/* ./deploy/
+          if [ -f "./.output/public/index.html" ]; then
+            echo "OUTPUT_DIR=.output/public" >> $GITHUB_OUTPUT
+          elif [ -f "./.out/public/index.html" ]; then
+            echo "OUTPUT_DIR=.out/public" >> $GITHUB_OUTPUT
+          elif [ -f "./dist/index.html" ]; then
+            echo "OUTPUT_DIR=dist" >> $GITHUB_OUTPUT
           else
-            echo "ERROR: No build output found!"
+            echo "::error::Aucun fichier index.html trouvé après le build!"
             exit 1
           fi
-          
-          # Crée 404.html seulement si index.html existe
-          if [ -f "./deploy/index.html" ]; then
-            cp ./deploy/index.html ./deploy/404.html
-          fi
 
+      # Déploie EXACTEMENT ce que Vinxi a généré
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./deploy
+          path: ${{ steps.find_output.outputs.OUTPUT_DIR }}
 
       - name: Deploy
         uses: actions/deploy-pages@v4
