@@ -4,9 +4,8 @@
   align-items: center;
   width: 100%;
   margin-bottom: 5rem;
+
   .skillContainer {
-    width: 80%;
-    max-width: 1600px;
     margin-top: 2rem;
   }
 }
@@ -14,6 +13,10 @@
 .def_section {
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .skillIcon {
@@ -28,12 +31,28 @@ h2 {
 .projectCardInSkill {
   margin-bottom: 2rem;
   display: flex;
+
   &.alternate {
     flex-direction: row-reverse;
     text-align: right;
   }
+
   .projectTextInSkill {
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column !important;
+    text-align: left !important;
+
+    &.alternate {
+      flex-direction: column !important;
+      text-align: left !important;
+    }
+
+    .projectTextInSkill {
+      margin: 1rem 0 0 0 !important;
+    }
   }
 }

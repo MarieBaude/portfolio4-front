@@ -26,6 +26,7 @@ export default function Project() {
         </div>
         <img src={project()?.mainImage} alt="image de présentation du projet" />
       </section>
+      
       <section>
         <h2>La présentation, la définition du projet ou de la réalisation</h2>
         <p class="projectText">{project()?.def}</p>

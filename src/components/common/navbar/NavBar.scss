@@ -1,18 +1,50 @@
-nav {
+.navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   color: var(--color-text);
-  margin-top: 2rem;
-  position: relative;
+  padding: 1rem 5rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: var(--color-quaternary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .navText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    span:first-child {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    span:last-child {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  }
+
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+    z-index: 1000;
+  }
 
   .navLinks {
     display: flex;
-    align-items: center;
     list-style: none;
-    position: relative;
+    margin: 0;
+    padding: 0;
+    align-items: center;
 
     li {
-      margin-right: 1.5rem;
+      margin-left: 1.5rem;
       position: relative;
 
       a {
@@ -20,18 +52,30 @@ nav {
         color: inherit;
         display: flex;
         align-items: center;
+        padding: 0.5rem 0;
       }
     }
 
     .subMenu {
-      display: flex;
-      align-items: center;
-      position: relative;
-      a {
-        margin-right: 0.2rem;
+      .subMenu-header {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        a {
+          margin-right: 0.3rem;
+        }
+
+        .icon {
+          transition: transform 0.3s ease;
+
+          &.open {
+            transform: rotate(180deg);
+          }
+        }
       }
 
-      ul {
+      .subMenu-list {
         position: absolute;
         top: 100%;
         left: 0;
@@ -43,33 +87,59 @@ nav {
         list-style: none;
         min-width: 200px;
         z-index: 100;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        transform: translateY(10px);
-      }
 
-      &:hover ul {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-      }
+        li {
+          margin: 0;
+          padding: 0.5rem 1rem;
 
-      li {
-        padding: 0.5rem 1rem;
-        margin: 0;
-        white-space: nowrap;
-
-        &:hover {
-          background: var(--color-action);
+          &:hover {
+            background: var(--color-action);
+          }
         }
       }
     }
   }
-}
 
-.navText {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    padding: 1rem;
+
+    .hamburger {
+      display: block;
+    }
+
+    .navLinks {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      padding: 1rem 0;
+      background: var(--color-background);
+
+      &.active {
+        display: flex;
+      }
+
+      li {
+        margin: 0.5rem 0;
+        width: 100%;
+        text-align: left;
+
+        a {
+          padding: 0.5rem 1rem;
+        }
+      }
+
+      .subMenu {
+        width: 100%;
+
+        .subMenu-list {
+          position: static;
+          width: 100%;
+          box-shadow: none;
+          background: var(--color-background-light);
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
 }
