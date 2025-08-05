@@ -12,28 +12,46 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
+      
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          
       - run: npm ci
       - run: npm run build
 
-      # Étape critique - Trouve le vrai dossier de sortie
-      - name: Locate Actual Build Output
-        id: find_output
+      # Étape critique - Nettoyage et vérification
+      - name: Prepare Deployment
         run: |
-          BUILD_DIR=$(find . -path '*/index.html' -exec dirname {} \; | head -n 1)
-          if [ -z "$BUILD_DIR" ]; then
-            echo "::error::Aucun fichier index.html trouvé dans :"
-            find . -type d | sort
+          # 1. Trouve le vrai dossier de build
+          if [ -d "./.output/public" ]; then
+            cp -R ./.output/public ./deploy
+          elif [ -d "./dist" ]; then
+            cp -R ./dist ./deploy
+          else
+            echo "::error::Aucun dossier de build trouvé!"
             exit 1
           fi
-          echo "Dossier de build trouvé : $BUILD_DIR"
-          echo "OUTPUT_DIR=${BUILD_DIR}" >> $GITHUB_OUTPUT
+
+          # 2. Force le type MIME correct
+          echo "<!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset='utf-8'>
+              <title>Mon App</title>
+            </head>
+            <body>
+              <div id='root'></div>
+              <script src='/assets/index.js' type='module'></script>
+            </body>
+          </html>" > ./deploy/index.html
+
+          # 3. Crée un fichier .nojekyll pour désinter le traitement Jekyll
+          touch ./deploy/.nojekyll
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ steps.find_output.outputs.OUTPUT_DIR }}
+          path: ./deploy
 
       - name: Deploy
         uses: actions/deploy-pages@v4
