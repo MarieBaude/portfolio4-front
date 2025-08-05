@@ -2,7 +2,8 @@ name: Deploy Vinxi to GitHub Pages
 
 on:
   push:
-    branches: [master]  
+    branches: [master]
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -19,13 +20,34 @@ jobs:
       - run: npm ci
       - run: npm run build
 
+      - name: Debug build output
+        run: |
+          ls -R .output || true
+          ls -R .out || true
+          ls -R dist || true
+
       - name: Prepare Artifacts
         run: |
           mkdir -p ./deploy
-          [ -d "./.output/public" ] && cp -R ./.output/public/* ./deploy/  # Structure V2
-          [ -d "./.out/public" ] && cp -R ./.out/public/* ./deploy/        # Structure V1
-          [ -d "./dist" ] && cp -R ./dist/* ./deploy/                     # Fallback
-          cp ./deploy/index.html ./deploy/404.html  # Pour le routage SPA
+          
+          if [ -d "./.output/public" ]; then
+            echo "Using .output/public structure"
+            cp -R ./.output/public/* ./deploy/
+          elif [ -d "./.out/public" ]; then
+            echo "Using .out/public structure"
+            cp -R ./.out/public/* ./deploy/
+          elif [ -d "./dist" ]; then
+            echo "Using dist structure"
+            cp -R ./dist/* ./deploy/
+          else
+            echo "ERROR: No build output found!"
+            exit 1
+          fi
+          
+          # Crée 404.html seulement si index.html existe
+          if [ -f "./deploy/index.html" ]; then
+            cp ./deploy/index.html ./deploy/404.html
+          fi
 
       - uses: actions/upload-pages-artifact@v3
         with:
