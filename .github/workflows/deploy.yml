@@ -18,22 +18,19 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      # Étape CRITIQUE - Trouve le vrai dossier
-      - name: Locate Real Build Output
+      # Étape critique - Trouve le vrai dossier de sortie
+      - name: Locate Actual Build Output
         id: find_output
         run: |
-          if [ -f "./.output/public/index.html" ]; then
-            echo "OUTPUT_DIR=.output/public" >> $GITHUB_OUTPUT
-          elif [ -f "./.out/public/index.html" ]; then
-            echo "OUTPUT_DIR=.out/public" >> $GITHUB_OUTPUT
-          elif [ -f "./dist/index.html" ]; then
-            echo "OUTPUT_DIR=dist" >> $GITHUB_OUTPUT
-          else
-            echo "::error::Aucun fichier index.html trouvé après le build!"
+          BUILD_DIR=$(find . -path '*/index.html' -exec dirname {} \; | head -n 1)
+          if [ -z "$BUILD_DIR" ]; then
+            echo "::error::Aucun fichier index.html trouvé dans :"
+            find . -type d | sort
             exit 1
           fi
+          echo "Dossier de build trouvé : $BUILD_DIR"
+          echo "OUTPUT_DIR=${BUILD_DIR}" >> $GITHUB_OUTPUT
 
-      # Déploie EXACTEMENT ce que Vinxi a généré
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ${{ steps.find_output.outputs.OUTPUT_DIR }}
