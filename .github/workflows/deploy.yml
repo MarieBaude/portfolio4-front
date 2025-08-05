@@ -2,24 +2,24 @@ name: Deploy SolidStart to GitHub Pages
 
 on:
   push:
-    branches: [master]
+    branches: [master] 
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write   
+      pages: write      
+      contents: read    
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-
       - run: npm ci
       - run: npm run build
-
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .output/public
-
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: actions/deploy-pages@v4
