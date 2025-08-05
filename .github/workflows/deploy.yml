@@ -1,25 +1,35 @@
-name: Deploy SolidStart to GitHub Pages
+name: Deploy Vinxi to GitHub Pages
 
 on:
   push:
-    branches: [master] 
-
+    branches: [master]  
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     permissions:
-      id-token: write   
-      pages: write      
-      contents: read    
+      pages: write
+      id-token: write
     steps:
       - uses: actions/checkout@v4
+      
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          
       - run: npm ci
       - run: npm run build
+
+      - name: Prepare Artifacts
+        run: |
+          mkdir -p ./deploy
+          [ -d "./.output/public" ] && cp -R ./.output/public/* ./deploy/  # Structure V2
+          [ -d "./.out/public" ] && cp -R ./.out/public/* ./deploy/        # Structure V1
+          [ -d "./dist" ] && cp -R ./dist/* ./deploy/                     # Fallback
+          cp ./deploy/index.html ./deploy/404.html  # Pour le routage SPA
+
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .output/public
+          path: ./deploy
+
       - name: Deploy
         uses: actions/deploy-pages@v4
