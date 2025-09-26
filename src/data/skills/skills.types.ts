@@ -1,5 +1,5 @@
 export interface Skill {
-  id: number;
+  id: string;
   title: string;
   type: "tech" | "non-tech";
   icon: string;
