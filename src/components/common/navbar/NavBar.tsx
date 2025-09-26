@@ -1,7 +1,10 @@
-import { createSignal, Show } from "solid-js";
+import { createSignal, Show, onCleanup, onMount } from "solid-js";
+import { useNavigate } from "@solidjs/router";
 import "./NavBar.scss";
 
 export default function NavBar() {
+  const navigate = useNavigate();
+
   const [isMenuOpen, setIsMenuOpen] = createSignal(false);
   const [isSkillsOpen, setIsSkillsOpen] = createSignal(false);
   const [isProjectsOpen, setIsProjectsOpen] = createSignal(false);
@@ -9,6 +12,54 @@ export default function NavBar() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen());
   const toggleSkills = () => setIsSkillsOpen(!isSkillsOpen());
   const toggleProjects = () => setIsProjectsOpen(!isProjectsOpen());
+
+  const closeAllMenus = () => {
+    setIsMenuOpen(false);
+    setIsSkillsOpen(false);
+    setIsProjectsOpen(false);
+  };
+
+  const handleLinkClick = (event: any, href: any) => {
+    event.preventDefault();
+    closeAllMenus();
+    
+    if (href) {
+      navigate(href);
+    }
+  };
+
+  const handleSubMenuClick = (event: any, toggleFunction: any) => {
+    event.stopPropagation();
+    toggleFunction();
+  };
+
+
+  onMount(() => {
+    const handleClickOutside = (event: any) => {
+      const navbar = document.querySelector('.navbar');
+      if (!navbar?.contains(event.target)) {
+        closeAllMenus();
+        return;
+      }
+
+      const target = event.target;
+      const isSubMenuElement = target.closest('.subMenu');
+      const isHamburger = target.closest('.hamburger');
+      const isNavLink = target.closest('.navLinks > li > a');
+
+      if (!isSubMenuElement && !isHamburger && !isNavLink) {
+        closeAllMenus();
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    onCleanup(() => {
+      document.removeEventListener('click', handleClickOutside);
+    });
+  });
+
+
 
   return (
     <nav class="navbar">
@@ -18,7 +69,7 @@ export default function NavBar() {
       </div>
 
       {/* Menu Hamburger pour mobile */}
-      <button class="hamburger" onClick={toggleMenu}>
+      <button class="hamburger" onClick={(e) => handleSubMenuClick(e, toggleMenu)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -39,13 +90,13 @@ export default function NavBar() {
       {/* Menu principal */}
       <ul class={`navLinks ${isMenuOpen() ? "active" : ""}`}>
         <li>
-          <a href="/">Accueil</a>
+          <a href="/" onClick={(e) => handleLinkClick(e, "/")}>Accueil</a>
         </li>
         <li>
-          <a href="/about">A propos</a>
+          <a href="/about" onClick={(e) => handleLinkClick(e, "/about")}>A propos</a>
         </li>
         <li class="subMenu">
-          <div class="subMenu-header" onClick={toggleSkills}>
+          <div class="subMenu-header" onClick={(e) => handleSubMenuClick(e, toggleSkills)}>
             <a href="/skills">Compétences</a>
             <svg
               class={`icon ${isSkillsOpen() ? "open" : ""}`}
@@ -62,40 +113,40 @@ export default function NavBar() {
           <Show when={isSkillsOpen()}>
             <ul class="subMenu-list">
               <li>
-                <a href="/skills/1">Angular</a>
+                <a href="/skills/1" onClick={(e) => handleLinkClick(e, "/skills/angular")}>Angular</a>
               </li>
               <li>
-                <a href="/skills/2">Spring Boot</a>
+                <a href="/skills/2" onClick={(e) => handleLinkClick(e, "/skills/spring")}>Spring Boot</a>
               </li>
               <li>
-                <a href="/skills/3">Soon</a>
+                <a href="/skills/react" onClick={(e) => handleLinkClick(e, "/skills/react")}>React</a>
               </li>
               <li>
-                <a href="/skills/4">Soon</a>
+                <a href="/skills/nest" onClick={(e) => handleLinkClick(e, "/skills/nest")}>Nest</a>
               </li>
               <li>
-                <a href="/skills/5">Katalon</a>
+                <a href="/skills/katalon" onClick={(e) => handleLinkClick(e, "/skills/katalon")}>Katalon</a>
               </li>
               <li>
-                <a href="/skills/6">Soon</a>
+                <a href="/skills/docker" onClick={(e) => handleLinkClick(e, "/skills/docker")}>Docker</a>
               </li>
               <li>
-                <a href="/skills/7">Agilité</a>
+                <a href="/skills/agile" onClick={(e) => handleLinkClick(e, "/skills/agile")}>Agilité</a>
               </li>
               <li>
-                <a href="/skills/8">Relation client</a>
+                <a href="/skills/client" onClick={(e) => handleLinkClick(e, "/skills/client")}>Relation client</a>
               </li>
               <li>
-                <a href="/skills/9">Soon</a>
+                <a href="/skills/qualite" onClick={(e) => handleLinkClick(e, "/skills/qualite")}>Qualité</a>
               </li>
               <li>
-                <a href="/skills/10">Soon</a>
+                <a href="/skills/10" onClick={(e) => handleLinkClick(e, "/skills/10")}>Soon</a>
               </li>
             </ul>
           </Show>
         </li>
         <li class="subMenu">
-          <div class="subMenu-header" onClick={toggleProjects}>
+          <div class="subMenu-header" onClick={(e) => handleSubMenuClick(e, toggleProjects)}>
             <a href="/projects">Projets</a>
             <svg
               class={`icon ${isProjectsOpen() ? "open" : ""}`}
@@ -112,25 +163,25 @@ export default function NavBar() {
           <Show when={isProjectsOpen()}>
             <ul class="subMenu-list">
               <li>
-                <a href="/projects/1">Wahis</a>
+                <a href="/projects/1" onClick={(e) => handleLinkClick(e, "/projects/1")}>Wahis</a>
               </li>
               <li>
-                <a href="/projects/2">T-Source</a>
+                <a href="/projects/2" onClick={(e) => handleLinkClick(e, "/projects/2")}>T-Source</a>
               </li>
               <li>
-                <a href="/projects/3">Soon</a>
+                <a href="/projects/3" onClick={(e) => handleLinkClick(e, "/projects/3")}>Soon</a>
               </li>
               <li>
-                <a href="/projects/4">Soon</a>
+                <a href="/projects/4" onClick={(e) => handleLinkClick(e, "/projects/4")}>Soon</a>
               </li>
               <li>
-                <a href="/projects/5">Soon</a>
+                <a href="/projects/5" onClick={(e) => handleLinkClick(e, "/projects/5")}>Soon</a>
               </li>
             </ul>
           </Show>
         </li>
         <li>
-          <a href="/experience">Parcours</a>
+          <a href="/experience" onClick={(e) => handleLinkClick(e, "/experience")}>Parcours</a>
         </li>
       </ul>
     </nav>

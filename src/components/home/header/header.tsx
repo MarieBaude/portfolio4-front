@@ -3,15 +3,15 @@ import "./header.scss";
 export default function Header() {
   return (
     <header class="headerContainer">
-      <img src="public/images/home/Group_44.png" alt="illu de présentation" />
+      <img src="public/images/home/4380744.png" alt="illu de présentation" />
       <div class="headerContent">
         <div class="headerTexts">
-          <h2>Lorem Ipsum</h2>
+          <h2>Portfolio</h2>
           <span>
-            Aenean sodales risus non dui consequat, ac lobortis diam venenatis.
+            Ce portfolio est le fruit de l'un de mes examen de mastère expert en ingénierie logiciel.
           </span>
         </div>
-        <button>Action</button>
+        <button>A propos</button>
       </div>
     </header>
   );
