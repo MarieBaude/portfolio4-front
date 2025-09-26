@@ -169,10 +169,10 @@ export default function NavBar() {
                 <a href="/projects/2" onClick={(e) => handleLinkClick(e, "/projects/2")}>T-Source</a>
               </li>
               <li>
-                <a href="/projects/3" onClick={(e) => handleLinkClick(e, "/projects/3")}>Soon</a>
+                <a href="/projects/3" onClick={(e) => handleLinkClick(e, "/projects/3")}>MPMT</a>
               </li>
               <li>
-                <a href="/projects/4" onClick={(e) => handleLinkClick(e, "/projects/4")}>Soon</a>
+                <a href="/projects/4" onClick={(e) => handleLinkClick(e, "/projects/4")}>Nowelia</a>
               </li>
               <li>
                 <a href="/projects/5" onClick={(e) => handleLinkClick(e, "/projects/5")}>Soon</a>
