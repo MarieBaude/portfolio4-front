@@ -13,8 +13,9 @@ export default function Contact() {
         </form>
       </div>
       <img
-        src="public/images/home/Rectangle_12.png"
+        src="public/images/home/contact.png"
         alt="illustration formulaire contact"
+        class="contactImg"
       />
     </section>
   );
