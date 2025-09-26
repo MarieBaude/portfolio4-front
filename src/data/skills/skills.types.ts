@@ -6,7 +6,7 @@ export interface Skill {
   level: number;
   color: string;
   def: string;
-  crit: string;
+  crit: string[];
   evol: string;
   projectIds: number[];
 }

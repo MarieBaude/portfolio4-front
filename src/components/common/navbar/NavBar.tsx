@@ -113,31 +113,31 @@ export default function NavBar() {
           <Show when={isSkillsOpen()}>
             <ul class="subMenu-list">
               <li>
-                <a href="/skills/1" onClick={(e) => handleLinkClick(e, "/skills/1")}>Angular</a>
+                <a href="/skills/1" onClick={(e) => handleLinkClick(e, "/skills/angular")}>Angular</a>
               </li>
               <li>
-                <a href="/skills/2" onClick={(e) => handleLinkClick(e, "/skills/2")}>Spring Boot</a>
+                <a href="/skills/2" onClick={(e) => handleLinkClick(e, "/skills/spring")}>Spring Boot</a>
               </li>
               <li>
-                <a href="/skills/3" onClick={(e) => handleLinkClick(e, "/skills/3")}>Soon</a>
+                <a href="/skills/react" onClick={(e) => handleLinkClick(e, "/skills/react")}>React</a>
               </li>
               <li>
-                <a href="/skills/4" onClick={(e) => handleLinkClick(e, "/skills/4")}>Soon</a>
+                <a href="/skills/nest" onClick={(e) => handleLinkClick(e, "/skills/nest")}>Nest</a>
               </li>
               <li>
-                <a href="/skills/5" onClick={(e) => handleLinkClick(e, "/skills/5")}>Katalon</a>
+                <a href="/skills/katalon" onClick={(e) => handleLinkClick(e, "/skills/katalon")}>Katalon</a>
               </li>
               <li>
-                <a href="/skills/6" onClick={(e) => handleLinkClick(e, "/skills/6")}>Soon</a>
+                <a href="/skills/docker" onClick={(e) => handleLinkClick(e, "/skills/docker")}>Docker</a>
               </li>
               <li>
-                <a href="/skills/7" onClick={(e) => handleLinkClick(e, "/skills/7")}>Agilité</a>
+                <a href="/skills/agile" onClick={(e) => handleLinkClick(e, "/skills/agile")}>Agilité</a>
               </li>
               <li>
-                <a href="/skills/8" onClick={(e) => handleLinkClick(e, "/skills/8")}>Relation client</a>
+                <a href="/skills/client" onClick={(e) => handleLinkClick(e, "/skills/client")}>Relation client</a>
               </li>
               <li>
-                <a href="/skills/9" onClick={(e) => handleLinkClick(e, "/skills/9")}>Soon</a>
+                <a href="/skills/qualite" onClick={(e) => handleLinkClick(e, "/skills/qualite")}>Qualité</a>
               </li>
               <li>
                 <a href="/skills/10" onClick={(e) => handleLinkClick(e, "/skills/10")}>Soon</a>
