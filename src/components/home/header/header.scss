@@ -4,8 +4,13 @@
   display: flex;
   justify-content: space-between;
 
+  img {
+    max-width: 80%;
+  }
+
   @media (max-width: 1028px) {
     display: block;
+
     img {
       display: none;
     }
