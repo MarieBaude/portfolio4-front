@@ -1,0 +1,144 @@
+/**
+ * ErrorFallback Styles
+ * 
+ * Styling for error boundary fallback UI
+ * Provides clean, user-friendly error display
+ */
+
+.error-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  padding: 2rem;
+  background-color: var(--color-primary);
+}
+
+.error-container {
+  text-align: center;
+  max-width: 600px;
+  padding: 2rem;
+  background-color: var(--color-secondary);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.error-icon {
+  color: var(--color-action);
+  margin-bottom: 1.5rem;
+  
+  svg {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.error-title {
+  color: var(--color-text);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: var(--color-text);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.error-details {
+  margin-bottom: 2rem;
+  text-align: left;
+  
+  summary {
+    color: var(--color-text);
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    
+    &:hover {
+      color: var(--color-action);
+    }
+  }
+}
+
+.error-stack {
+  background-color: var(--color-quaternary);
+  color: var(--color-text);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin-bottom: 1rem;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &--primary {
+    background-color: var(--color-action);
+    color: white;
+    
+    &:hover {
+      background-color: var(--color-action);
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+  }
+  
+  &--secondary {
+    background-color: transparent;
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+    
+    &:hover {
+      background-color: var(--color-text);
+      color: var(--color-primary);
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .error-fallback {
+    padding: 1rem;
+  }
+  
+  .error-container {
+    padding: 1.5rem;
+  }
+  
+  .error-title {
+    font-size: 1.25rem;
+  }
+  
+  .error-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
