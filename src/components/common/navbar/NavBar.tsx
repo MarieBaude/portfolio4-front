@@ -37,7 +37,7 @@ export default function NavBar() {
         { href: "/skills/agile", label: "Agilité" },
         { href: "/skills/client", label: "Relation client" },
         { href: "/skills/qualite", label: "Qualité" },
-        { href: "/skills/10", label: "Soon" }
+        { href: "/skills/soon", label: "Soon" }
       ],
       isOpen: isSkillsOpen,
       onToggle: (e: MouseEvent) => handleSubMenuClick(e, toggleSkills)

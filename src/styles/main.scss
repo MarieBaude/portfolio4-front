@@ -1,7 +1,7 @@
-@import "variables";
-@import "mixins";
-@import "reset";
-@import "base";
+@use "variables";
+@use "mixins";
+@use "reset";
+@use "base";
 
 main {
   width: 65% !important;

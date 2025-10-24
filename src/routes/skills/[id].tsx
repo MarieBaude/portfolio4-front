@@ -7,7 +7,7 @@ import { SKILLS_DATA } from "~/data/skills/skills.data";
 export default function SkillCard() {
   const params = useParams();
   const skill = () =>
-    SKILLS_DATA.find((skill) => skill.id === Number(params.id));
+    SKILLS_DATA.find((skill) => skill.id === params.id);
 
   return (
     <>
