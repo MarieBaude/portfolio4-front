@@ -1,28 +1,5 @@
-import { About, Hobbit } from "./about.types";
+import { Hobbit } from "./about.types";
 import { BookIcon, HeadphonesIcon, MouseIcon } from "../icons";
-
-export const ABOUT: About[] = [
-  {
-    title: "Présentation",
-    content:
-      "",
-  },
-  {
-    title: "Mes valeurs",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et porta mauris, et faucibus neque.",
-  },
-  {
-    title: "Mon projet professionnel",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et porta mauris, et faucibus neque.",
-  },
-  {
-    title: "Mes qualités humaines",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et porta mauris, et faucibus neque.",
-  },
-];
 
 export const HOBBIT: Hobbit[] = [
   {

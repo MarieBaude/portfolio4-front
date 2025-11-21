@@ -18,15 +18,15 @@ export default function Timeline(props: TimelineProps) {
               </div>
               <div class={`timeline-content ${item.position}`}>
                 <h2>{item.title}</h2>
-                <div>
-
-                   <img src={item.logo} />
-               
-                  {item.date}
-                  {item.city}
-                  {item.campany}
-
-                
+                <div class="oneLine">
+                  <div class="logoInfo">
+                    <img class="expLogo" src={item.logo} />
+                  </div>
+                  <div class="placeInfo">
+                    <span class="campanyExp">{item.campany}</span>
+                    <span class="dateExp">{item.date}</span>
+                    <span class="cityExp">{item.city}</span>
+                  </div>
                 </div>
               </div>
             </div>

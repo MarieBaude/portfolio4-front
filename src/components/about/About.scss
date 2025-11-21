@@ -36,8 +36,15 @@
   margin-top: 2rem;
   margin-bottom: 3rem;
   .oneHobby {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-bottom: 1rem;
+    .oneHobbyTitle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      h3 {
+        margin-bottom: 0;
+      }
+    }
   }
 }
