@@ -13,9 +13,9 @@ export default function Bar() {
           <h2 class="titleBar">Réalisations</h2>
         </div>
       </a>
-      <a href="/experience">
+      <a href="/contact">
         <div class="skillBar">
-          <h2 class="titleBar">Parcours</h2>
+          <h2 class="titleBar">Contact</h2>
         </div>
       </a>
     </section>

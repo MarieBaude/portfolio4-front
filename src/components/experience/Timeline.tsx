@@ -1,4 +1,4 @@
-import { For } from "solid-js";
+import { For, createSignal } from "solid-js";
 import { TimelineItem } from "~/data/experience/experience.types";
 import "./Timelice.scss";
 
@@ -7,6 +7,10 @@ interface TimelineProps {
 }
 
 export default function Timeline(props: TimelineProps) {
+  const [selectedItem, setSelectedItem] = createSignal<TimelineItem | null>(
+    null
+  );
+
   return (
     <div class="container">
       <div id="timeline">
@@ -16,7 +20,10 @@ export default function Timeline(props: TimelineProps) {
               <div class="timeline-icon">
                 <item.icon />
               </div>
-              <div class={`timeline-content ${item.position}`}>
+              <div
+                class={`timeline-content ${item.position}`}
+                onClick={() => setSelectedItem(item)}
+              >
                 <h2>{item.title}</h2>
                 <div class="oneLine">
                   <div class="logoInfo">
@@ -33,6 +40,28 @@ export default function Timeline(props: TimelineProps) {
           )}
         </For>
       </div>
+
+      {selectedItem() && (
+        <div class="popup-overlay" onClick={() => setSelectedItem(null)}>
+          <div class="popup-content" onClick={(e) => e.stopPropagation()}>
+            <button class="popup-close" onClick={() => setSelectedItem(null)}>
+              ×
+            </button>
+            <h2>{selectedItem()!.title}</h2>
+            <div class="popup-details">
+              <img src={selectedItem()!.logo} alt={selectedItem()!.campany} />
+              <div>
+                <p>
+                  <strong>{selectedItem()!.campany}</strong>
+                </p>
+                <p>{selectedItem()!.date}</p>
+                <p>{selectedItem()!.city}</p>
+              </div>
+            </div>
+            <p>{selectedItem()!.content}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

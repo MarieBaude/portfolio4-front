@@ -54,9 +54,9 @@ export default function NavBarMenu({ isMenuOpen, onLinkClick, subMenus }: NavBar
         />
       ))}
       
-      {/* Parcours - should be last */}
+      {/* Contact */}
       <li>
-        <a href="/experience" onClick={(e) => onLinkClick(e, "/experience")}>Parcours</a>
+        <a href="/contact" onClick={(e) => onLinkClick(e, "/contact")}>Contact</a>
       </li>
     </ul>
   );

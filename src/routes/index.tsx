@@ -1,6 +1,5 @@
 import { Title } from "@solidjs/meta";
 import Header from "~/components/home/header/header";
-import Contact from "../components/home/contact/contact";
 import Bar from "../components/home/bar/bar";
 
 export default function Home() {
@@ -9,7 +8,6 @@ export default function Home() {
       <Title>Accueil</Title>
       <Header />
       <Bar />
-      <Contact />
     </div>
   );
 }

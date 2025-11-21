@@ -12,7 +12,7 @@ export const TIMELINE_DATA: TimelineItem[] = [
     content:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.",
     position: "right",
-    icon: SchoolIcon,
+    icon: SchoolIcon
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ export const TIMELINE_DATA: TimelineItem[] = [
     content:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.",
     position: "right",
-    icon: SchoolIcon,
+    icon: SchoolIcon
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ export const TIMELINE_DATA: TimelineItem[] = [
     content:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.",
     position: "right",
-    icon: SchoolIcon,
+    icon: SchoolIcon
   },
   {
     id: 5,
@@ -64,6 +64,6 @@ export const TIMELINE_DATA: TimelineItem[] = [
     content:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.",
     position: "left",
-    icon: WorkIcon,
+    icon: WorkIcon
   },
 ];

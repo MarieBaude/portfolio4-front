@@ -1,7 +1,7 @@
-import "./contact.scss";
+import "./ContactComponent.scss";
 import { createSignal } from "solid-js";
 
-export default function Contact() {
+export default function ContactComponent() {
   const [isSubmitting, setIsSubmitting] = createSignal(false);
   const [submitResult, setSubmitResult] = createSignal<{ type: 'success' | 'error', message: string } | null>(null);
 
