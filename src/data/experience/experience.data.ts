@@ -4,66 +4,107 @@ import { TimelineItem } from "./experience.types";
 export const TIMELINE_DATA: TimelineItem[] = [
   {
     id: 1,
+    type: "education",
     date: "2017 - 2018",
     title: "Développeur d'application",
+    diploma: "Titre professionnel Développeur d'application (Niveau 5)",
     city: "Valenciennes",
     campany: "POP School",
     logo: "public/images/experience/popschool.png",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.",
+    institutionDescription:
+      "...",
+    pedagogyVision:
+      "...",
+    websiteUrl: "https://popschool.fr",
     position: "right",
-    icon: SchoolIcon
+    icon: SchoolIcon,
   },
   {
     id: 2,
+    type: "education",
     date: "Novembre 2021 - Août 2022",
-    title: "Bachelor conceptrice développpeusse d’application",
+    title: "Conceptrice développeuse d'application",
+    diploma: "Bachelor Concepteur Développeur d'Applications (Niveau 6)",
     city: "Valenciennes",
     campany: "Simplon",
     logo: "public/images/experience/Logo_simplon.co.svg.png",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.",
+    institutionDescription:
+      "...",
+    pedagogyVision:
+      "...",
+    websiteUrl: "https://simplon.co",
     position: "right",
-    icon: SchoolIcon
+    icon: SchoolIcon,
   },
   {
     id: 3,
+    type: "work",
     date: "Mai 2022 - Juillet 2022",
-    title: "Stagiaire conceptrice développpeusse d’application",
+    title: "Conceptrice développeuse d'application",
     city: "Valenciennes",
     campany: "Fadmarts",
-    logo: "",
+    logo: "public/images/experience/icons8-tapis-80.png",
     res: "Développeuse full-stack",
     status: "Stagiaire",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.",
+    missions: [
+      "1",
+      "2",
+    ],
+    achievements: [
+      { title: "Site e-commerce (non disponible)" },
+    ],
+    skills: ["NestJS", "PUG", "Conception de base de donnée", "Documentaiton fonctionnelle", "Gestion de projet agile"],
     position: "left",
     icon: WorkIcon,
   },
   {
     id: 4,
-    date: "Décembre 2023 - Novembre 2025",
-    title: "Mastère experte en ingénierie logiciel",
+    type: "education",
+    date: "Décembre 2023 - Mars 2026",
+    title: "Experte en ingénierie logicielle",
+    diploma: "Mastère Expert en Ingénierie Logicielle (Niveau 7)",
     city: "Distanciel",
     campany: "ISCOD",
     logo: "public/images/experience/iscod_logo.jpg",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.",
+    institutionDescription:
+      "...",
+    pedagogyVision:
+      "...",
+    websiteUrl: "https://iscod.fr",
     position: "right",
-    icon: SchoolIcon
+    icon: SchoolIcon,
   },
   {
     id: 5,
+    type: "work",
     date: "Décembre 2023 - Janvier 2026",
-    title: "Apprentie ingénieure en étude et développement",
+    title: "Ingénieure en étude et développement",
     city: "Lille",
     campany: "Kapela",
     logo: "public/images/experience/kapela.png",
     res: "Développeuse full-stack",
     status: "Alternance",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo maiores magnam modi ab libero praesentium blanditiis.",
+    missions: [
+      "...",
+      "...",
+    ],
+    achievements: [
+      { title: "Wahis", url: "#" },
+      { title: "T-Source", url: "#" },
+      { title: "Gecko", url: "#" },
+    ],
+    skills: [
+      "Katalon",
+      "Relation client",
+      "Angular",
+      "Conception de base de donnée",
+      "Documentaiton technique et fonctionnelle",
+      "Gestion de projet agile",
+      "Spring Boot",
+      "JavasScript",
+      "PHP",
+    ],
     position: "left",
-    icon: WorkIcon
+    icon: WorkIcon,
   },
 ];

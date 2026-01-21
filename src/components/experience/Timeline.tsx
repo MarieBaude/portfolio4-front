@@ -1,6 +1,10 @@
-import { For, createSignal } from "solid-js";
-import { TimelineItem } from "~/data/experience/experience.types";
-import "./Timelice.scss";
+import { For, createSignal, Show } from "solid-js";
+import {
+  TimelineItem,
+  WorkTimelineItem,
+  EducationTimelineItem,
+} from "~/data/experience/experience.types";
+import "./Timeline.scss";
 
 interface TimelineProps {
   items: TimelineItem[];
@@ -8,8 +12,18 @@ interface TimelineProps {
 
 export default function Timeline(props: TimelineProps) {
   const [selectedItem, setSelectedItem] = createSignal<TimelineItem | null>(
-    null
+    null,
   );
+
+  const isWorkItem = (item: TimelineItem): item is WorkTimelineItem => {
+    return item.type === "work";
+  };
+
+  const isEducationItem = (
+    item: TimelineItem,
+  ): item is EducationTimelineItem => {
+    return item.type === "education";
+  };
 
   return (
     <div class="container">
@@ -27,12 +41,13 @@ export default function Timeline(props: TimelineProps) {
                 <h2>{item.title}</h2>
                 <div class="oneLine">
                   <div class="logoInfo">
-                    <img class="expLogo" src={item.logo} />
+                    <img class="expLogo" src={item.logo} alt={item.campany} />
                   </div>
                   <div class="placeInfo">
                     <span class="campanyExp">{item.campany}</span>
                     <span class="dateExp">{item.date}</span>
                     <span class="cityExp">{item.city}</span>
+                    <span class="more">Voir plus de détails</span>
                   </div>
                 </div>
               </div>
@@ -41,15 +56,18 @@ export default function Timeline(props: TimelineProps) {
         </For>
       </div>
 
-      {selectedItem() && (
+      <Show when={selectedItem()}>
         <div class="popup-overlay" onClick={() => setSelectedItem(null)}>
           <div class="popup-content" onClick={(e) => e.stopPropagation()}>
             <button class="popup-close" onClick={() => setSelectedItem(null)}>
               ×
             </button>
             <h2>{selectedItem()!.title}</h2>
+
             <div class="popup-details">
-              <img src={selectedItem()!.logo} alt={selectedItem()!.campany} />
+              <Show when={selectedItem()!.logo}>
+                <img src={selectedItem()!.logo} alt={selectedItem()!.campany} />
+              </Show>
               <div>
                 <p>
                   <strong>{selectedItem()!.campany}</strong>
@@ -58,10 +76,100 @@ export default function Timeline(props: TimelineProps) {
                 <p>{selectedItem()!.city}</p>
               </div>
             </div>
-            <p>{selectedItem()!.content}</p>
+
+            <Show when={isWorkItem(selectedItem()!)}>
+              <div class="work-details">
+                <div class="detail-section">
+                  <h3>Responsabilité</h3>
+                  <p>{(selectedItem() as WorkTimelineItem).res}</p>
+                </div>
+
+                <Show when={(selectedItem() as WorkTimelineItem).status}>
+                  <div class="detail-section">
+                    <h3>Statut</h3>
+                    <p class="status-badge">
+                      {(selectedItem() as WorkTimelineItem).status}
+                    </p>
+                  </div>
+                </Show>
+
+                <div class="detail-section">
+                  <h3>Détail des missions</h3>
+                  <ul class="details-list">
+                    <For each={(selectedItem() as WorkTimelineItem).missions}>
+                      {(mission) => <li>{mission}</li>}
+                    </For>
+                  </ul>
+                </div>
+
+                <Show when={(selectedItem() as WorkTimelineItem).achievements}>
+                  <div class="detail-section">
+                    <h3>Réalisations</h3>
+                    <ul class="achievements-list">
+                      <For
+                        each={(selectedItem() as WorkTimelineItem).achievements}
+                      >
+                        {(achievement) => (
+                          <li>
+                            <a
+                              href={achievement.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {achievement.title}
+                            </a>
+                          </li>
+                        )}
+                      </For>
+                    </ul>
+                  </div>
+                </Show>
+
+                <Show when={(selectedItem() as WorkTimelineItem).skills}>
+                  <div class="detail-section">
+                    <h3>Compétences associées</h3>
+                    <div class="skills-tags">
+                      <For each={(selectedItem() as WorkTimelineItem).skills}>
+                        {(skill) => <span class="skill-tag">{skill}</span>}
+                      </For>
+                    </div>
+                  </div>
+                </Show>
+              </div>
+            </Show>
+
+            <Show when={isEducationItem(selectedItem()!)}>
+              <div class="education-details">
+                <div class="education-details">
+                  <div class="detail-section">
+                    <h3>Diplôme obtenu</h3>
+                    <p class="diploma">
+                      {(selectedItem() as EducationTimelineItem).diploma}
+                    </p>
+                  </div>
+
+                  <div class="detail-section">
+                    <h3>À propos de l'établissement</h3>
+                    <p>
+                      {
+                        (selectedItem() as EducationTimelineItem)
+                          .institutionDescription
+                      }
+                    </p>
+                  </div>
+
+                  <div class="detail-section">
+                    <h3>Mon regard sur la pédagogie</h3>
+                    <p class="pedagogy">
+                      {(selectedItem() as EducationTimelineItem).pedagogyVision}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Show>
           </div>
         </div>
-      )}
+      </Show>
     </div>
   );
 }

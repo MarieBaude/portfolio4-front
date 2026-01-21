@@ -10,86 +10,158 @@ export default function AboutComponent() {
           <hr />
           <p>
             En alternance chez Kapela en tant que développeuse full-stack, en
-            master d’expert en ingénierie logicielle.
-            <br />
-            <br />
-            Mon parcours a débuté en tant qu'infographiste avant une
-            réorientation vers le développement web. Après une première
-            formation puis un bachelor en conception développeur d'applications
-            (CDA), j’ai intégré un master en alternance pour approfondir mes
-            compétences.
+            master d'expert en ingénierie logicielle. Mon parcours professionnel
+            a débuté en tant qu'infographiste avant une réorientation vers le
+            développement web. Après une première formation puis un bachelor en
+            conception développeur d'applications (CDA), j'ai intégré un mastère
+            en alternance pour approfondir mes compétences techniques et monter
+            en autonomie.
           </p>
+        </div>
+        <div>
+          <img src="public\images\photo_Marie_Baude.jpg" alt="" class="photo" />
         </div>
       </section>
 
-      <section>
+      <section class="values-section">
         <h3>Mes valeurs</h3>
-        <p class="para">
-          <b>L’intégrité</b> occupe une place importante à mes yeux : je
-          communique de façon transparente, aussi bien sur les réussites que sur
-          les difficultés rencontrées.
-          <br />
-          <br />
-          <b>Mon ouverture d’esprit</b> se traduit par un choix pragmatique des
-          technologies, adaptées au contexte, sans attachement aux modes ni aux
-          écosystèmes dominants.
-          <br />
-          <br />
-          <b>L’humilité</b> fait partie de ma façon de travailler : je ne mets
-          pas d’ego dans mon code, j’accueille les retours comme des
-          possibilités d’amélioration, je reconnais mes erreurs et je demande de
-          l’aide lorsque cela s’impose.
-        </p>
-
-        <h3>Mon projet professionnel</h3>
-        <p class="para">
-          Au cours de ces dernières années, j'ai expérimenté différents domaines
-          : frontend, backend, test auto. Cela m'a permis de bâtir de solides
-          bases afin de comprendre les enjeux de chaque domaine, même si je suis
-          convaincue que l'on est plus efficace quand on se spécialise.
-          <br />
-          <br />À <b>court</b> terme, je poursuis ma montée en compétences au
-          sein d'une entreprise afin de consolider mes capacités techniques. À{" "}
-          <b>moyen</b> terme, j’envisage de m’investir pleinement dans une
-          spécialisation, tout en restant ouverte aux évolutions technologiques.
-          À <b>long</b> terme, j'envisage une activité indépendante, qui me
-          permettrait de conserver un rôle technique centré sur la conception et
-          le développement.
-          <br />
-          Je suis satisfaite de ma reconversion et déterminée à continuer dans
-          ce milieu professionnel.
-        </p>
-
-        <h3>Mes qualités humaines</h3>
-        <p class="para">
-          Mes collègues me décrivent souvent comme une personne rigoureuse, je
-          fais attention à la qualité du code livré, au bon fonctionnement
-          métier, à une bonne gestion de projet, etc. J'aime obtenir le meilleur
-          résultat possible.
-          <br />
-          <br />
-          Méticuleuse, j'accorde une importance aux détails, à la clarté du
-          code, à des architectures propres, à la documentation pour le confort
-          de toute l'équipe.
-          <br />
-          <br />
-          Ma polyvalence me permet de m'adapter à différents rôles selon les
-          besoins : concevoir des architectures, développer en frontend ou
-          backend, ou encore mettre en place des tests automatisés.
-        </p>
+        <div class="values-grid">
+          <div class="value-card">
+            <h4>Intégrité</h4>
+            <p>
+              Je communique de façon transparente, aussi bien sur les réussites
+              que sur les difficultés rencontrées. Derrière chaque ligne de
+              code, il y a des professionnels qui ont besoin d'outils efficaces
+              pour travailler sereinement.
+            </p>
+          </div>
+          <div class="value-card">
+            <h4>Ouverture d'esprit</h4>
+            <p>
+              Je fais des choix pragmatiques de technologies, adaptées au
+              contexte, sans attachement aux modes ni aux écosystèmes dominants.
+            </p>
+          </div>
+          <div class="value-card">
+            <h4>Humilité</h4>
+            <p>
+              Je ne mets pas d'ego dans mon code, j'accueille les retours comme
+              des possibilités d'amélioration, je reconnais mes erreurs et je
+              demande de l'aide lorsque cela s'impose.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section>
+      <section class="project-section">
+        <h3>Mon projet professionnel</h3>
+        <p class="intro-text">
+          Ce qui me plaît profondément dans le métier de développeur, c'est la
+          satisfaction de faire fonctionner des systèmes, de voir une
+          architecture bien organisée prendre forme.
+        </p>
+
+        <div class="project-cards">
+          <div class="project-card">
+            <h4>À court terme</h4>
+            <ul>
+              <li>
+                Trouver le bon équilibre entre autonomie et communication avec
+                les équipes
+              </li>
+              <li>Développer mes compétences en gestion de projet Agile</li>
+              <li>Renforcer mes compétences en tests automatisés</li>
+              <li>
+                Pratiquer le DevOps et l'automatisation (CI/CD,
+                conteneurisation)
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <h4>À moyen terme</h4>
+            <ul>
+              <li>
+                Me spécialiser progressivement, tout en restant attentive aux
+                évolutions du métier
+              </li>
+              <li>
+                Poursuivre ma montée en compétences au sein d'une entreprise
+              </li>
+              <li>M'essayer au TDD</li>
+              <li>
+                Approfondir les design patterns et l'architecture logicielle
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <h4>À long terme</h4>
+            <ul>
+              <li>
+                Envisager une activité indépendante sur des projets de petite et
+                moyenne envergure
+              </li>
+              <li>
+                Conserver un rôle technique centré sur la conception et le
+                développement
+              </li>
+              <li>
+                Rester ouverte aux opportunités, en privilégiant les défis
+                techniques et la qualité de la collaboration
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="qualities-section">
+        <h3>Mes qualités humaines</h3>
+        <div class="qualities-grid">
+          <div class="quality-card">
+            <h4>Curiosité</h4>
+            <p>
+              J'explore régulièrement de nouvelles technologies et ma curiosité
+              me pousse à m'intéresser à plusieurs facettes du métier :
+              développement fullstack, QA, architecture logicielle, DevOps,
+              Scrum Master.
+            </p>
+          </div>
+          <div class="quality-card">
+            <h4>Polyvalence</h4>
+            <p>
+              Mon parcours m'a amenée à toucher à différents domaines. Une année
+              en QA, du frontend (Angular, React) et backend (Spring Boot,
+              NestJS, PHP). Je sais comprendre les enjeux de chaque métier.
+            </p>
+          </div>
+          <div class="quality-card">
+            <h4>Rigueur</h4>
+            <p>
+              Je teste toujours manuellement mes développements, j'implémente
+              des tests unitaires et end-to-end. J'organise mon code pour qu'il
+              soit lisible et je documente systématiquement.
+            </p>
+          </div>
+          <div class="quality-card">
+            <h4>Persévérance</h4>
+            <p>
+              Lorsque je rencontre un blocage, je prends une pause, j'essaie une
+              autre approche, et en dernier recours je demande de l'aide. Je
+              n'ai jamais abandonné un projet.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="hobbies-section">
         <h2>Mes centres d'intérêt</h2>
 
-        <div class="hobby">
+        <div class="hobbies-container">
           {HOBBIT.map((item) => (
-            <div class="oneHobby">
-                <span class="oneHobbyTitle">
-                    <item.icon />
-                    <h3>{item.title}</h3>
-                </span>
-                {item.subTitle && <span>{item.subTitle}</span>}
+            <div class="hobby-card">
+              <h4>{item.title}</h4>
+              {item.subTitle && <p class="hobby-subtitle">{item.subTitle}</p>}
             </div>
           ))}
         </div>
