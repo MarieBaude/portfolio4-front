@@ -66,3 +66,14 @@ export function createSkillRouteValidator() {
 
   return (skillId: string | undefined) => isValidRouteParam(skillId, validSkillIds);
 }
+
+/**
+ * Creates a route validator for projects
+ */
+export function createProjectRouteValidator() {
+  const validProjectIds = [
+    "autonomie", "quality", "publicRelation", "scrum"
+  ];
+
+  return (projectId: string | undefined) => isValidRouteParam(projectId, validProjectIds);
+}

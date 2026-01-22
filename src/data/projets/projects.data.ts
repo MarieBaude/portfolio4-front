@@ -2,7 +2,7 @@ import { Project } from "./projects.types";
 
 export const PROJECTS_DATA: Project[] = [
   {
-    id: 1,
+    id: "wahis",
     title: "Wahis",
     mainImage: "http://localhost:3000/public/images/Rectangle17.png",
     summary: "Plateforme de surveillance des maladies animales pour l'OMSA",
@@ -29,7 +29,7 @@ export const PROJECTS_DATA: Project[] = [
     skillIds: [1, 2],
   },
   {
-    id: 2,
+    id: "tsource",
     title: "T-Source",
     mainImage: "http://localhost:3000/public/images/Rectangle17.png",
     summary: "Application de traçabilité des matières premières pour Takasago",
@@ -54,7 +54,7 @@ export const PROJECTS_DATA: Project[] = [
     skillIds: [3, 5, 7],
   },
   {
-    id: 3,
+    id: "mpmt",
     title: "MPMT",
     mainImage: "http://localhost:3000/public/images/Rectangle17.png",
     summary: "Outil interne de gestion de projets",
@@ -79,7 +79,7 @@ export const PROJECTS_DATA: Project[] = [
     skillIds: [3, 5, 6, 8], // À adapter : Angular, Spring Boot, Docker, Qualité du code
   },
   {
-    id: 4,
+    id: "nowelia",
     title: "Nowelia",
     mainImage: "http://localhost:3000/public/images/Rectangle17.png",
     summary: "Plateforme communautaire de Web Novels",
@@ -106,7 +106,7 @@ export const PROJECTS_DATA: Project[] = [
     skillIds: [4, 6, 7, 8, 9], // À adapter : NestJS, Docker, React, Agilité, Qualité du code
   },
   {
-    id: 5,
+    id: "gecko",
     title: "Soon",
     mainImage: "http://localhost:3000/public/images/Rectangle17.png",
     summary: "--",

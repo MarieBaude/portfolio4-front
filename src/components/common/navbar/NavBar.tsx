@@ -37,7 +37,7 @@ export default function NavBar() {
         { href: "/skills/agile", label: "Agilité" },
         { href: "/skills/client", label: "Relation client" },
         { href: "/skills/qualite", label: "Qualité" },
-        { href: "/skills/soon", label: "Soon" }
+        { href: "/skills/autonomie", label: "Autonomie" }
       ],
       isOpen: isSkillsOpen,
       onToggle: (e: MouseEvent) => handleSubMenuClick(e, toggleSkills)
@@ -45,11 +45,11 @@ export default function NavBar() {
     {
       mainLink: { href: "/projects", label: "Projets" },
       subItems: [
-        { href: "/projects/1", label: "Wahis" },
-        { href: "/projects/2", label: "T-Source" },
-        { href: "/projects/3", label: "MPMT" },
-        { href: "/projects/4", label: "Nowelia" },
-        { href: "/projects/5", label: "Soon" }
+        { href: "/projects/wahis", label: "Wahis" },
+        { href: "/projects/tsource", label: "T-Source" },
+        { href: "/projects/mpmt", label: "MPMT" },
+        { href: "/projects/nowelia", label: "Nowelia" },
+        { href: "/projects/gecko", label: "Gecko" }
       ],
       isOpen: isProjectsOpen,
       onToggle: (e: MouseEvent) => handleSubMenuClick(e, toggleProjects)

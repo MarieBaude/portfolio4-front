@@ -6,8 +6,7 @@ export default function AboutComponent() {
     <>
       <section class="presentation">
         <div class="mainText">
-          <h2>Présentation</h2>
-          <hr />
+          <h3 class="mainSectionTitle">Présentation</h3>
           <p>
             En alternance chez Kapela en tant que développeuse full-stack, en
             master d'expert en ingénierie logicielle. Mon parcours professionnel
@@ -24,7 +23,7 @@ export default function AboutComponent() {
       </section>
 
       <section class="values-section">
-        <h3>Mes valeurs</h3>
+        <h3 class="mainSectionTitle">Mes valeurs</h3>
         <div class="values-grid">
           <div class="value-card">
             <h4>Intégrité</h4>
@@ -54,7 +53,7 @@ export default function AboutComponent() {
       </section>
 
       <section class="project-section">
-        <h3>Mon projet professionnel</h3>
+        <h3 class="mainSectionTitle">Mon projet professionnel</h3>
         <p class="intro-text">
           Ce qui me plaît profondément dans le métier de développeur, c'est la
           satisfaction de faire fonctionner des systèmes, de voir une
@@ -116,7 +115,7 @@ export default function AboutComponent() {
       </section>
 
       <section class="qualities-section">
-        <h3>Mes qualités humaines</h3>
+        <h3 class="mainSectionTitle">Mes qualités humaines</h3>
         <div class="qualities-grid">
           <div class="quality-card">
             <h4>Curiosité</h4>
@@ -155,7 +154,7 @@ export default function AboutComponent() {
       </section>
 
       <section class="hobbies-section">
-        <h2>Mes centres d'intérêt</h2>
+        <h3 class="mainSectionTitle">Mes centres d'intérêt</h3>
 
         <div class="hobbies-container">
           {HOBBIT.map((item) => (
@@ -166,6 +165,8 @@ export default function AboutComponent() {
           ))}
         </div>
       </section>
+
+      <h3 class="mainSectionTitle">Mon parcours</h3>
     </>
   );
 }

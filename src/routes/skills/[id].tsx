@@ -12,7 +12,6 @@ export default function SkillCard() {
   const skill = () =>
     SKILLS_DATA.find((skill) => skill.id === params.id);
 
-  // Validate the skill ID using our utility
   const isValidSkill = createSkillRouteValidator();
   
   if (!isValidSkill(params.id)) {

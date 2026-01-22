@@ -1,3 +1,11 @@
+export interface ProjectProof {
+  projectId: number;
+  title: string;
+  description: string;
+  achievements: string[];
+  conclusion: string;
+}
+
 export interface Skill {
   id: string;
   title: string;
@@ -6,7 +14,13 @@ export interface Skill {
   level: number;
   color: string;
   def: string;
-  crit: string[];
-  evol: string;
-  projectIds: number[];
+  proofs: ProjectProof[];
+  crit: {
+    paragraphs: string[];
+    advice: string[];
+  };
+  evol: {
+    text: string;
+    roadmap: string[];
+  };
 }

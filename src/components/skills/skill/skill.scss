@@ -3,56 +3,309 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-bottom: 5rem;
-
-  .skillContainer {
-    margin-top: 2rem;
-  }
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: var(--color-primary);
 }
 
-.def_section {
+.skillContainer {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+// Header Section
+.skillHeader {
   display: flex;
   align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: var(--color-secondary);
+  border-radius: 16px;
+  border: 2px solid var(--color-action);
+  margin-bottom: 3rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .skillIcon {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+
+    @media (max-width: 768px) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .skillTitle {
+    font-size: 2.5rem;
+    color: var(--color-action);
+    margin: 0;
+    font-weight: 700;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
   }
 }
 
-.skillIcon {
-  width: 15rem;
-  height: 15rem;
+// Section Structure
+.skillSection {
+  margin-bottom: 3rem;
+
+  .sectionTitle {
+    font-size: 1.8rem;
+    color: var(--color-action);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--color-action);
+    font-weight: 600;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
 }
 
-h2 {
-  margin-top: 2rem;
+// Definition Card
+.definitionCard {
+  background: var(--color-secondary);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 5px solid var(--color-action);
+
+  .definitionText {
+    color: var(--color-text);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin: 0;
+  }
 }
 
-.projectCardInSkill {
-  margin-bottom: 2rem;
+// Proofs Container
+.proofsContainer {
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
-  &.alternate {
-    flex-direction: row-reverse;
-    text-align: right;
+.proofCard {
+  background: var(--color-secondary);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 5px solid var(--color-action);
+
+  .proofTitle {
+    color: var(--color-action);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
   }
 
-  .projectTextInSkill {
-    margin-left: 1rem;
-    margin-right: 1rem;
+  .proofDescription {
+    color: var(--color-text);
+    line-height: 1.7;
+    margin: 0 0 1.5rem 0;
+    font-size: 1.05rem;
   }
 
-  @media (max-width: 1024px) {
-    flex-direction: column !important;
-    text-align: left !important;
+  .proofAchievements {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
 
-    &.alternate {
-      flex-direction: column !important;
-      text-align: left !important;
+    li {
+      color: var(--color-text);
+      padding: 0.75rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      line-height: 1.6;
+      font-size: 1rem;
+
+      &:before {
+        content: "→";
+        color: var(--color-action);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--color-quaternary);
+      }
+    }
+  }
+
+}
+
+// Critique Card
+.critiqueCard {
+  background: var(--color-secondary);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 5px solid var(--color-action);
+
+  .levelBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--color-quaternary);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    border: 2px solid var(--color-action);
+
+    .levelText {
+      color: var(--color-text);
+      font-weight: 600;
+      font-size: 1rem;
     }
 
-    .projectTextInSkill {
-      margin: 1rem 0 0 0 !important;
+    .stars {
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .levelNumber {
+      color: var(--color-action);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+  }
+
+  .critiqueContent {
+    .critiqueParagraph {
+      color: var(--color-text);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .adviceSection {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--color-quaternary);
+
+      .adviceTitle {
+        color: var(--color-action);
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 0 0 1rem 0;
+      }
+
+      .adviceList {
+        padding: 0;
+        margin: 0;
+        padding-left: 1.5rem;
+
+        li {
+          color: var(--color-text);
+          padding: 0.75rem 0;
+          position: relative;
+          line-height: 1.6;
+          list-style-type: disc;
+
+          &:before {
+            color: var(--color-action);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+          }
+
+          &:not(:last-child) {
+            border-bottom: 1px solid var(--color-quaternary);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Evolution Card
+.evolutionCard {
+  background: var(--color-secondary);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 5px solid var(--color-action);
+
+  .evolutionText {
+    color: var(--color-text);
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .roadmapSection {
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--color-quaternary);
+
+    .roadmapTitle {
+      color: var(--color-action);
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
+    }
+
+    .roadmapList {
+      padding: 0;
+      margin: 0;
+      padding-left: 1.5rem;
+
+      li {
+        color: var(--color-text);
+        padding: 0.75rem 0;
+        position: relative;
+        line-height: 1.6;
+        list-style-type: disc;
+
+        &:before {
+          color: var(--color-action);
+          position: absolute;
+          left: 0;
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--color-quaternary);
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .skillContent {
+    padding: 1rem;
+  }
+
+  .skillContainer {
+    width: 100%;
+  }
+
+  .definitionCard,
+  .proofCard,
+  .critiqueCard,
+  .evolutionCard {
+    padding: 1.5rem;
+  }
+
+  .proofCard {
+    &:hover {
+      transform: translateX(0);
     }
   }
 }

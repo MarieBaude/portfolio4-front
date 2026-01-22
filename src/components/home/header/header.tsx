@@ -12,7 +12,9 @@ export default function Header() {
             Ce portfolio est le fruit de l'un de mes examen de mastère expert en ingénierie logiciel.
           </span>
         </div>
-        <button>A propos</button>
+        <button>
+          <a href="/about">A propos</a>
+        </button>
       </div>
     </header>
   );

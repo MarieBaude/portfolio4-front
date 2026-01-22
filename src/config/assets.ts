@@ -39,6 +39,7 @@ export const ASSET_PATHS = {
     scrum: getSkillIconPath('scrum.png'),
     publicRelation: getSkillIconPath('public-relation.png'),
     quality: getSkillIconPath('quality.png'),
+    autonomie: getSkillIconPath('autonomie.png'),
   },
   experience: {
     iscod: getExperienceIconPath('iscod_logo.jpg'),

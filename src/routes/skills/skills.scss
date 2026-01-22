@@ -1,62 +1,17 @@
-.skillContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+.progress_bar_content {
   margin-bottom: 5rem;
-
-  .skillContainer {
-    margin-top: 2rem;
-  }
-}
-
-.def_section {
-  display: flex;
-  align-items: center;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-}
-
-.skillIcon {
-  width: 15rem;
-  height: 15rem;
-}
-
-h2 {
-  margin-top: 2rem;
-}
-
-.projectCardInSkill {
-  margin-bottom: 2rem;
-  display: flex;
-
-  &.alternate {
-    flex-direction: row-reverse;
-    text-align: right;
-  }
-
-  .projectTextInSkill {
-    margin-left: 1rem;
-    margin-right: 1rem;
-
-    ul {
-      
+  & > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 15px; 
     }
   }
 
-  @media (max-width: 1024px) {
-    flex-direction: column !important;
-    text-align: left !important;
-
-    &.alternate {
-      flex-direction: column !important;
-      text-align: left !important;
-    }
-
-    .projectTextInSkill {
-      margin: 1rem 0 0 0 !important;
-    }
+  h2 {
+    grid-column: 1 / -1;
+    margin: 30px 0 15px 0;
   }
 }

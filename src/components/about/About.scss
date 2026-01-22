@@ -41,6 +41,19 @@
 
 }
 
+.mainSectionTitle {
+  font-size: 1.8rem;
+    color: var(--color-action);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--color-action);
+    font-weight: 600;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+}
+
 // Section Valeurs
 .values-section {
   margin-bottom: 5rem;

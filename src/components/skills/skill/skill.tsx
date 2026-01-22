@@ -1,62 +1,103 @@
 import { A, useParams } from "@solidjs/router";
 import "./skill.scss";
 import { SKILLS_DATA } from "~/data/skills/skills.data";
-import { PROJECTS_DATA } from "~/data/projets/projects.data";
-import { For } from "solid-js";
+import { For, Show } from "solid-js";
 
 export default function Skill() {
   const params = useParams();
-  const skill = () =>
-    SKILLS_DATA.find((skill) => skill.id === Number(params.id));
+  const skill = () => SKILLS_DATA.find((skill) => skill.id === params.id);
 
-  const relatedProjects = () =>
-    PROJECTS_DATA.filter((project) =>
-      skill()?.projectIds?.includes(project.id)
-    );
+  const renderStars = (level: number) => {
+    const stars = Math.round(level / 20);
+    return "⭐".repeat(stars);
+  };
 
   return (
     <div class="skillContent">
       <div class="skillContainer">
-        {/* <h1>{skill()?.title}</h1> */}
-
-        {/* Définition */}
-        <div class="def_section">
+        {/* Header avec icône et titre */}
+        <div class="skillHeader">
           <img src={skill()?.icon} class="skillIcon" alt={skill()?.title} />
-          <div class="def_text">
-            <h2>Ma définition</h2>
-            <p>{skill()?.def}</p>
-          </div>
+          <h1 class="skillTitle">{skill()?.title}</h1>
         </div>
 
+        {/* Définition */}
+        <section class="skillSection">
+          <h2 class="sectionTitle">Ma définition</h2>
+          <div class="definitionCard">
+            <p class="definitionText">{skill()?.def}</p>
+          </div>
+        </section>
+
         {/* Preuves */}
-        <h2>Mes éléments de preuve</h2>
-        <For each={relatedProjects()}>
-          {(project, index) => (
-            <A
-              href={`/projects/${project.id}`}
-              class="projectCardInSkill"
-              classList={{ alternate: index() % 2 !== 0 }}
-            >
-              <img
-                src={project.mainImage}
-                alt={project.title}
-                class="projectImageInSkill"
-              />
-              <div class="projectTextInSkill">
-                <h3>{project.title}</h3>
-                <p>{project.summary}</p>
-              </div>
-            </A>
-          )}
-        </For>
+        <Show when={skill()?.proofs && skill()!.proofs.length > 0}>
+          <section class="skillSection">
+            <h2 class="sectionTitle">Mes éléments de preuve</h2>
+            <div class="proofsContainer">
+              <For each={skill()?.proofs}>
+                {(proof) => (
+                  <div class="proofCard">
+                    <h3 class="proofTitle">{proof.title}</h3>
+                    <p class="proofDescription">{proof.description}</p>
+                    <ul class="proofAchievements">
+                      <For each={proof.achievements}>
+                        {(achievement) => <li>{achievement}</li>}
+                      </For>
+                    </ul>
+                    <p class="proofDescription">{proof.conclusion}</p>
+                  </div>
+                )}
+              </For>
+            </div>
+          </section>
+        </Show>
 
         {/* Auto critique */}
-        <h2>Mon autocritique</h2>
-        <p>{skill()?.crit}</p>
+        <section class="skillSection">
+          <h2 class="sectionTitle">Mon autocritique</h2>
+          <div class="critiqueCard">
+            <div class="levelBadge">
+              <span class="levelText">Niveau :</span>
+              <span class="stars">{renderStars(skill()?.level || 0)}</span>
+              <span class="levelNumber">({skill()?.level}/100)</span>
+            </div>
+            <div class="critiqueContent">
+              <For each={skill()?.crit.paragraphs}>
+                {(paragraph) => <p class="critiqueParagraph">{paragraph}</p>}
+              </For>
+
+              <Show when={skill()?.crit.advice && skill()!.crit.advice.length > 0}>
+                <div class="adviceSection">
+                  <h4 class="adviceTitle">Recul et conseils :</h4>
+                  <ul class="adviceList">
+                    <For each={skill()?.crit.advice}>
+                      {(advice) => <li>{advice}</li>}
+                    </For>
+                  </ul>
+                </div>
+              </Show>
+            </div>
+          </div>
+        </section>
 
         {/* Evolution */}
-        <h2>Mon évolution dans cette compétence</h2>
-        <p>{skill()?.evol}</p>
+        <section class="skillSection">
+          <h2 class="sectionTitle">Mon évolution dans cette compétence</h2>
+          <div class="evolutionCard">
+            <p class="evolutionText">{skill()?.evol.text}</p>
+
+            <Show when={skill()?.evol.roadmap && skill()!.evol.roadmap.length > 0}>
+              <div class="roadmapSection">
+                <h4 class="roadmapTitle">Roadmap :</h4>
+                <ul class="roadmapList">
+                  <For each={skill()?.evol.roadmap}>
+                    {(item) => <li>{item}</li>}
+                  </For>
+                </ul>
+              </div>
+            </Show>
+          </div>
+        </section>
       </div>
     </div>
   );
