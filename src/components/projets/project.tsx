@@ -6,11 +6,13 @@ import { For } from "solid-js";
 
 export default function Project() {
   const params = useParams();
-  const project = () =>
-    PROJECTS_DATA.find((project) => project.id === Number(params.id));
+  // const project = () =>
+  //   PROJECTS_DATA.find((project) => project.id === Number(params.id));
 
-  const skills = () =>
-    SKILLS_DATA.filter((skill) => project()?.skillIds?.includes(skill.id));
+  // const skills = () =>
+  //   SKILLS_DATA.filter((skill) => project()?.skillIds?.includes(skill.id));
+
+  const project = () => PROJECTS_DATA.find((project) => project.id === params.id);
 
   return (
     <>
@@ -66,7 +68,7 @@ export default function Project() {
         <p class="projectText">{project()?.crit}</p>
 
         <h2>Compétences</h2>
-        <div class="skills">
+        {/* <div class="skills">
           <For each={skills()}>
             {(skill) => (
               <div class="skill">
@@ -82,7 +84,7 @@ export default function Project() {
               </div>
             )}
           </For>
-        </div>
+        </div> */}
       </section>
     </>
   );

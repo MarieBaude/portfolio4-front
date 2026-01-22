@@ -1,4 +1,4 @@
-import { A, useParams } from "@solidjs/router";
+import { useParams } from "@solidjs/router";
 import "./skill.scss";
 import { SKILLS_DATA } from "~/data/skills/skills.data";
 import { For, Show } from "solid-js";
@@ -66,7 +66,9 @@ export default function Skill() {
                 {(paragraph) => <p class="critiqueParagraph">{paragraph}</p>}
               </For>
 
-              <Show when={skill()?.crit.advice && skill()!.crit.advice.length > 0}>
+              <Show
+                when={skill()?.crit.advice && skill()!.crit.advice.length > 0}
+              >
                 <div class="adviceSection">
                   <h4 class="adviceTitle">Recul et conseils :</h4>
                   <ul class="adviceList">
@@ -86,7 +88,9 @@ export default function Skill() {
           <div class="evolutionCard">
             <p class="evolutionText">{skill()?.evol.text}</p>
 
-            <Show when={skill()?.evol.roadmap && skill()!.evol.roadmap.length > 0}>
+            <Show
+              when={skill()?.evol.roadmap && skill()!.evol.roadmap.length > 0}
+            >
               <div class="roadmapSection">
                 <h4 class="roadmapTitle">Roadmap :</h4>
                 <ul class="roadmapList">
@@ -97,6 +101,24 @@ export default function Skill() {
               </div>
             </Show>
           </div>
+        </section>
+
+        {/* Projets */}
+        <section class="skillSection">
+          <h2 class="sectionTitle">Réalisations rattachées</h2>
+          <Show when={skill()?.project && skill()!.project.length > 0}>
+            <div class="projectLinksCard">
+              <ul class="projectLinksList">
+                <For each={skill()?.project}>
+                  {(proj) => (
+                    <li>
+                      <a href={proj.url}>{proj.title}</a>
+                    </li>
+                  )}
+                </For>
+              </ul>
+            </div>
+          </Show>
         </section>
       </div>
     </div>

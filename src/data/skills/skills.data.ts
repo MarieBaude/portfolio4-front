@@ -59,6 +59,16 @@ export const SKILLS_DATA: Skill[] = [
         "Optimiser les performances (lazy loading, OnPush change detection, tree shaking)",
       ],
     },
+    project: [
+      {
+        title: "MPMT",
+        url: "/projects/mpmt"
+      },
+      {
+        title: "T-Source",
+        url: "/projects/tsource"
+      },
+    ]
   },
   {
     id: "spring",
@@ -116,6 +126,16 @@ export const SKILLS_DATA: Skill[] = [
         "Optimiser les performances (requêtes SQL, caching, indexation)",
       ],
     },
+    project: [
+      {
+        title: "MPMT",
+        url: "/projects/mpmt"
+      },
+      {
+        title: "T-Source",
+        url: "/projects/tsource"
+      },
+    ]
   },
   {
     id: "react",
@@ -173,6 +193,12 @@ export const SKILLS_DATA: Skill[] = [
         "Renforcer les optimisations de performance",
       ],
     },
+    project: [
+      {
+        title: "Nowelia",
+        url: "/projects/nowelia"
+      },
+    ]
   },
   {
     id: "nest",
@@ -219,6 +245,13 @@ export const SKILLS_DATA: Skill[] = [
         "Comparer les performances NestJS vs Spring Boot sur des cas réels",
       ],
     },
+    project: [
+      {
+        title: "Nowelia",
+        url: "/projects/nowelia"
+      },
+
+    ]
   },
   {
     id: "katalon",
@@ -266,6 +299,12 @@ export const SKILLS_DATA: Skill[] = [
         "Appliquer le Test-Driven Development (TDD) sur des projets futurs",
       ],
     },
+    project: [
+      {
+        title: "Wahis",
+        url: "/projects/wahis"
+      },
+    ]
   },
   {
     id: "docker",
@@ -322,6 +361,16 @@ export const SKILLS_DATA: Skill[] = [
         "Améliorer les pipelines CI/CD (GitHub Actions, GitLab CI)",
       ],
     },
+    project: [
+      {
+        title: "MPMT",
+        url: "/projects/mpmt"
+      },
+      {
+        title: "Nowelia",
+        url: "/projects/nowelia"
+      },
+    ]
   },
   // COMPÉTENCES NON-TECH
   {
@@ -390,6 +439,20 @@ export const SKILLS_DATA: Skill[] = [
         "Passer une certification Scrum Master",
       ],
     },
+    project: [
+      {
+        title: "Nowelia",
+        url: "/projects/nowelia"
+      },
+      {
+        title: "Wahis",
+        url: "/projects/wahis"
+      },
+      {
+        title: "Gecko",
+        url: "/projects/gecko"
+      },
+    ]
   },
   {
     id: "client",
@@ -445,6 +508,16 @@ export const SKILLS_DATA: Skill[] = [
         "Développer ma capacité à vulgariser les aspects techniques",
       ],
     },
+    project: [
+      {
+        title: "Wahis",
+        url: "/projects/wahis"
+      },
+      {
+        title: "T-Source",
+        url: "/projects/tsource"
+      },
+    ]
   },
   {
     id: "qualite",
@@ -515,6 +588,20 @@ export const SKILLS_DATA: Skill[] = [
         "Me perfectionner en UML",
       ],
     },
+    project: [
+      {
+        title: "Gecko",
+        url: "/projects/gecko"
+      },
+      {
+        title: "Wahis",
+        url: "/projects/wahis"
+      },
+      {
+        title: "Nowelia",
+        url: "/projects/nowelia"
+      },
+    ]
   },
   {
     id: "autonomie",
@@ -581,5 +668,19 @@ export const SKILLS_DATA: Skill[] = [
         "Oser poser des questions plus tôt, sans voir cela comme un échec",
       ],
     },
+    project: [
+      {
+        title: "MPMT",
+        url: "/projects/mpmt"
+      },
+      {
+        title: "T-Source",
+        url: "/projects/tsource"
+      },
+      {
+        title: "Wahis",
+        url: "/projects/wahis"
+      },
+    ]
   },
 ];

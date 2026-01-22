@@ -18,6 +18,7 @@
 .skillHeader {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   padding: 2rem;
   background: var(--color-secondary);
@@ -137,9 +138,6 @@
         font-size: 1.1rem;
       }
 
-      &:not(:last-child) {
-        border-bottom: 1px solid var(--color-quaternary);
-      }
     }
   }
 
@@ -195,7 +193,6 @@
     .adviceSection {
       margin-top: 2rem;
       padding-top: 1.5rem;
-      border-top: 2px solid var(--color-quaternary);
 
       .adviceTitle {
         color: var(--color-action);
@@ -223,10 +220,6 @@
             font-weight: bold;
             font-size: 1.2rem;
           }
-
-          &:not(:last-child) {
-            border-bottom: 1px solid var(--color-quaternary);
-          }
         }
       }
     }
@@ -249,7 +242,6 @@
 
   .roadmapSection {
     padding-top: 1.5rem;
-    border-top: 2px solid var(--color-quaternary);
 
     .roadmapTitle {
       color: var(--color-action);
@@ -277,9 +269,46 @@
           font-weight: bold;
           font-size: 1.2rem;
         }
+      }
+    }
+  }
+}
 
-        &:not(:last-child) {
-          border-bottom: 1px solid var(--color-quaternary);
+// Project Links
+.projectLinksCard {
+  background: var(--color-secondary);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 5px solid var(--color-action);
+
+  .projectLinksList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 0.75rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+
+      &:before {
+        content: "→";
+        color: var(--color-action);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+
+      a {
+        color: var(--color-text);
+        text-decoration: none;
+        font-size: 1.05rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: var(--color-action);
+          text-decoration: underline;
         }
       }
     }

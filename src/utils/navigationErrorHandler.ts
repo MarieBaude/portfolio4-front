@@ -61,7 +61,7 @@ export function isValidRouteParam(param: string | undefined, validValues: string
 export function createSkillRouteValidator() {
   const validSkillIds = [
     "angular", "spring", "react", "nest", "katalon", 
-    "docker", "agile", "client", "qualite", "soon"
+    "docker", "agile", "client", "qualite", "autonomie"
   ];
 
   return (skillId: string | undefined) => isValidRouteParam(skillId, validSkillIds);
@@ -72,7 +72,7 @@ export function createSkillRouteValidator() {
  */
 export function createProjectRouteValidator() {
   const validProjectIds = [
-    "autonomie", "quality", "publicRelation", "scrum"
+    "wahis", "tsource", "mpmt", "nowelia", "gecko"
   ];
 
   return (projectId: string | undefined) => isValidRouteParam(projectId, validProjectIds);

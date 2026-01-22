@@ -1,12 +1,14 @@
 .progress_bar_content {
   margin-bottom: 5rem;
-  & > div {
+
+  &>div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
-      gap: 15px; 
+      gap: 15px;
     }
   }
 
@@ -15,3 +17,19 @@
     margin: 30px 0 15px 0;
   }
 }
+
+.skillType {
+  color: var(--color-action);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--color-action);
+  font-weight: 600;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+// .skillMainTitle {
+
+// }

@@ -6,6 +6,11 @@ export interface ProjectProof {
   conclusion: string;
 }
 
+export interface ProjectURL {
+  title: string;
+  url?: string; 
+}
+
 export interface Skill {
   id: string;
   title: string;
@@ -23,4 +28,5 @@ export interface Skill {
     text: string;
     roadmap: string[];
   };
+  project: ProjectURL[];
 }
