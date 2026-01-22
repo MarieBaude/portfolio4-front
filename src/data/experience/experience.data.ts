@@ -105,6 +105,7 @@ export const TIMELINE_DATA: TimelineItem[] = [
       "PHP",
     ],
     position: "left",
+    websiteUrl: "https://kapela.fr",
     icon: WorkIcon,
   },
 ];

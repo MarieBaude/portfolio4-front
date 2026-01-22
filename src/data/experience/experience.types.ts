@@ -16,19 +16,20 @@ export interface BaseTimelineItem {
 
 export interface WorkTimelineItem extends BaseTimelineItem {
   type: "work";
-  res: string; // Responsabilité (chef de projet, directeur, etc.)
-  status?: string; // Statut (Stagiaire, Alternance, CDI, etc.)
+  res: string; 
+  status?: string;
   missions: string[];
   achievements?: { title: string; url?: string }[];
-  skills?: string[]; // Compétences rattachées
+  skills?: string[]; 
+  websiteUrl?: string;
 }
 
 export interface EducationTimelineItem extends BaseTimelineItem {
   type: "education";
-  diploma: string; // Le diplôme ou titre
-  institutionDescription: string; // Présentation de l'établissement
-  pedagogyVision: string; // Vision de la pédagogie pratiquée
-  websiteUrl?: string; // Lien vers le site de l'établissement
+  diploma: string; 
+  institutionDescription: string; 
+  pedagogyVision: string; 
+  websiteUrl?: string; 
 }
 
 export type TimelineItem = WorkTimelineItem | EducationTimelineItem;

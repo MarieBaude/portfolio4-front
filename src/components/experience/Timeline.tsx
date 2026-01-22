@@ -64,19 +64,23 @@ export default function Timeline(props: TimelineProps) {
             </button>
             <h2>{selectedItem()!.title}</h2>
 
-            <div class="popup-details">
-              <Show when={selectedItem()!.logo}>
-                <img src={selectedItem()!.logo} alt={selectedItem()!.campany} />
-              </Show>
-              <div>
-                <p>
-                  <strong>{selectedItem()!.campany}</strong>
-                </p>
-                <p>{selectedItem()!.date}</p>
-                <p>{selectedItem()!.city}</p>
+            <a href={selectedItem()!.websiteUrl} target="_blank">
+              <div class="popup-details">
+                <Show when={selectedItem()!.logo}>
+                  <img
+                    src={selectedItem()!.logo}
+                    alt={selectedItem()!.campany}
+                  />
+                </Show>
+                <div>
+                  <p>
+                    <strong>{selectedItem()!.campany}</strong>
+                  </p>
+                  <p>{selectedItem()!.date}</p>
+                  <p>{selectedItem()!.city}</p>
+                </div>
               </div>
-            </div>
-
+            </a>
             <Show when={isWorkItem(selectedItem()!)}>
               <div class="work-details">
                 <div class="detail-section">

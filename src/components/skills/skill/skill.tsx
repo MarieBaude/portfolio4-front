@@ -2,6 +2,7 @@ import { useParams } from "@solidjs/router";
 import "./skill.scss";
 import { SKILLS_DATA } from "~/data/skills/skills.data";
 import { For, Show } from "solid-js";
+import { PROJECTS_DATA } from "~/data/projets/projects.data";
 
 export default function Skill() {
   const params = useParams();
@@ -107,16 +108,28 @@ export default function Skill() {
         <section class="skillSection">
           <h2 class="sectionTitle">Réalisations rattachées</h2>
           <Show when={skill()?.project && skill()!.project.length > 0}>
-            <div class="projectLinksCard">
-              <ul class="projectLinksList">
-                <For each={skill()?.project}>
-                  {(proj) => (
-                    <li>
-                      <a href={proj.url}>{proj.title}</a>
-                    </li>
-                  )}
-                </For>
-              </ul>
+            <div class="projectsGrid">
+              <For each={skill()?.project}>
+                {(proj) => {
+                  const projectData = PROJECTS_DATA.find(
+                    (p) => p.id === proj.url?.split("/").pop(),
+                  );
+                  return (
+                    <a href={proj.url} class="projectCard">
+                      <Show when={projectData?.mainImage}>
+                        <div class="projectImageWrapper">
+                          <img
+                            src={projectData!.mainImage}
+                            alt={proj.title}
+                            class="projectImage"
+                          />
+                        </div>
+                      </Show>
+                      <span class="projectTitle">{proj.title}</span>
+                    </a>
+                  );
+                }}
+              </For>
             </div>
           </Show>
         </section>
