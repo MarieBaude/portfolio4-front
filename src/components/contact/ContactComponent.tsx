@@ -34,7 +34,9 @@ export default function ContactComponent() {
         });
         form.reset();
       } else {
-        const text = await response.text(); // ⬅️ IMPORTANT
+        const text = await response.text(); 
+        console.error(text);
+        console.log(FORMSPREE_ENDPOINT);
         throw new Error("Erreur lors de l'envoi");
       }
     } catch (error: any) {
