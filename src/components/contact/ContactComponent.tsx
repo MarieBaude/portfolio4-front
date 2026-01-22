@@ -35,8 +35,11 @@ export default function ContactComponent() {
         form.reset();
       } else {
         const text = await response.text(); 
-        console.error(text);
-        console.log(FORMSPREE_ENDPOINT);
+        console.log("ENV:", import.meta.env);
+        console.log(
+          "FORMSPREE:",
+  import.meta.env.PUBLIC_FORMSPREE_ENDPOINT
+);
         throw new Error("Erreur lors de l'envoi");
       }
     } catch (error: any) {
