@@ -44,9 +44,15 @@ export default function ContactComponent() {
 
   return (
     <section class="contact_content">
-      <div class="formContainer">
+      <div class="textContainer">
         <h2>Contact</h2>
+        <p class="contactDescription">
+          Une question, un projet ou simplement envie d'échanger ? 
+          N'hésitez pas à me contacter via ce formulaire. 
+        </p>
+      </div>
 
+      <div class="formContainer">
         {submitResult() && (
           <div class={`alert ${submitResult()?.type === 'success' ? 'alert-success' : 'alert-error'}`}>
             <span>{submitResult()?.message}</span>
@@ -64,13 +70,6 @@ export default function ContactComponent() {
             {isSubmitting() ? 'Envoi en cours...' : 'Envoyer'}
           </button>
         </form>
-      </div>
-      <div class="imageContainer">
-        <img
-          src="/images/home/contact.png"
-          alt="illustration formulaire contact"
-          class="contactImg"
-        />
       </div>
     </section>
   );

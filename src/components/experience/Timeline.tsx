@@ -5,6 +5,7 @@ import {
   EducationTimelineItem,
 } from "~/data/experience/experience.types";
 import "./Timeline.scss";
+import { PROJECTS_DATA } from "~/data/projets/projects.data";
 
 interface TimelineProps {
   items: TimelineItem[];
@@ -109,23 +110,34 @@ export default function Timeline(props: TimelineProps) {
                 <Show when={(selectedItem() as WorkTimelineItem).achievements}>
                   <div class="detail-section">
                     <h3>Réalisations</h3>
-                    <ul class="achievements-list">
-                      <For
-                        each={(selectedItem() as WorkTimelineItem).achievements}
-                      >
-                        {(achievement) => (
-                          <li>
-                            <a
-                              href={achievement.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
+                    <div class="projectsGrid">
+                      <For each={(selectedItem() as WorkTimelineItem).achievements}>
+                        {(achievement) => {
+                          const projectId = achievement.url?.replace('/projects/', '').replace('/', '');
+                          const projectData = PROJECTS_DATA.find(p => p.id === projectId);
+                          
+                          return (
+                            <Show 
+                              when={achievement.url} 
+                              fallback={
+                                <div class="projectCard no-link">
+                                  <span class="projectTitle">{achievement.title}</span>
+                                </div>
+                              }
                             >
-                              {achievement.title}
-                            </a>
-                          </li>
-                        )}
+                              <a href={achievement.url} class="projectCard" target="_blank">
+                                <Show when={projectData?.mainImage}>
+                                  <div class="projectImageWrapper">
+                                    <img src={projectData!.mainImage} alt={achievement.title} class="projectImage" />
+                                  </div>
+                                </Show>
+                                <span class="projectTitle">{achievement.title}</span>
+                              </a>
+                            </Show>
+                          );
+                        }}
                       </For>
-                    </ul>
+                    </div>
                   </div>
                 </Show>
 
