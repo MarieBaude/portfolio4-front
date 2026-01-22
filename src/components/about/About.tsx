@@ -18,7 +18,7 @@ export default function AboutComponent() {
           </p>
         </div>
         <div>
-          <img src="public\images\photo_Marie_Baude.jpg" alt="" class="photo" />
+          <img src="\images\photo_Marie_Baude.jpg" alt="" class="photo" />
         </div>
       </section>
 
