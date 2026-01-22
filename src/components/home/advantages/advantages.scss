@@ -1,0 +1,191 @@
+@use "../../../styles/variables" as *;
+
+/* =========================
+   TITRE
+========================= */
+
+.sectionTitle {
+  font-size: 1.8rem;
+  color: var(--color-action);
+  margin: 3rem 0 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--color-action);
+  font-weight: 600;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.skillsCloudSection {
+  display: flex;
+  justify-content: center;
+}
+
+.cloud-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   CLOUD
+========================= */
+
+ul.cloud {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  /* ⬅️ PLUS LARGE = MOINS DE LIGNES */
+  width: min(900px, 100%);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  /* densité */
+  line-height: 2.2rem;
+}
+
+/* =========================
+   ITEMS
+========================= */
+
+ul.cloud li {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   LIENS / TAGS
+========================= */
+
+ul.cloud a {
+  --size: 4;
+  --color: var(--color-action);
+
+  display: block;
+  position: relative;
+
+  font-size: calc(var(--size) * 0.22rem + 0.6rem);
+  font-weight: 500;
+
+  padding: 0.15rem 0.45rem;
+  color: var(--color);
+  text-decoration: none;
+  white-space: nowrap;
+
+}
+
+/* =========================
+   TAILLES (WEIGHTS)
+========================= */
+
+ul.cloud a[data-weight="1"]  { --size: 2; }
+ul.cloud a[data-weight="2"]  { --size: 3; }
+ul.cloud a[data-weight="3"]  { --size: 4; }
+ul.cloud a[data-weight="4"]  { --size: 5; }
+ul.cloud a[data-weight="5"]  { --size: 6; }
+ul.cloud a[data-weight="6"]  { --size: 7; }
+ul.cloud a[data-weight="7"]  { --size: 8; }
+ul.cloud a[data-weight="8"]  { --size: 9; }
+ul.cloud a[data-weight="9"]  { --size: 11; }
+ul.cloud a[data-weight="10"] { --size: 13; }
+
+/* =========================
+   MÉLANGE VISUEL (IMPORTANT)
+========================= */
+
+/* désordre de placement */
+ul.cloud li:nth-child(1)  { order: 4; }
+ul.cloud li:nth-child(2)  { order: 1; }
+ul.cloud li:nth-child(3)  { order: 6; }
+ul.cloud li:nth-child(4)  { order: 2; }
+ul.cloud li:nth-child(5)  { order: 8; }
+ul.cloud li:nth-child(6)  { order: 3; }
+ul.cloud li:nth-child(7)  { order: 7; }
+ul.cloud li:nth-child(8)  { order: 5; }
+ul.cloud li:nth-child(9)  { order: 9; }
+ul.cloud li:nth-child(10) { order: 10; }
+
+/* micro-chaos naturel */
+ul.cloud a {
+  transform: none;
+}
+
+ul.cloud a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transform: translate(0, 0);
+}
+
+ul.cloud li:nth-child(odd) a::after {
+  transform: translateY(-4px);
+}
+
+ul.cloud li:nth-child(3n) a::after {
+  transform: translateY(5px);
+}
+
+ul.cloud li:nth-child(4n) a::after {
+  transform: translateX(4px);
+}
+/* =========================
+   COULEURS VARIÉES
+========================= */
+
+ul.cloud li:nth-child(2n + 1) a {
+  --color: var(--color-action);
+}
+
+ul.cloud li:nth-child(3n + 1) a {
+  --color: #4c6ef5;
+}
+
+ul.cloud li:nth-child(4n + 1) a {
+  --color: #c77dff;
+}
+
+/* =========================
+   HOVER / FOCUS
+========================= */
+
+ul.cloud a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color);
+  opacity: 0.12;
+  transform: scaleX(0);
+  transform-origin: center;
+  z-index: -1;
+}
+
+ul.cloud a:hover::before,
+ul.cloud a:focus::before {
+  transform: scaleX(1);
+}
+
+ul.cloud a:focus {
+  outline: 2px dashed var(--color-action);
+  outline-offset: 2px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  ul.cloud {
+    width: 100%;
+    line-height: 2.6rem;
+  }
+}

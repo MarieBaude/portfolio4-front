@@ -20,7 +20,7 @@ export default function SkillCard() {
 
   return (
     <ErrorBoundary>
-      <Title>{skill()?.title || "Compétence non trouvée"}</Title>
+      <Title>{skill()?.title + " - Portfolio"}</Title>
 
       <Show 
         when={skill()} 

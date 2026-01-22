@@ -13,7 +13,7 @@ export default function NotFound() {
 
   return (
     <div class="not-found-page">
-      <Title>Page non trouvée - Marie Baude</Title>
+      <Title>Page non trouvée - Portfolio</Title>
       <HttpStatusCode code={404} />
       
       <div class="not-found-container">

@@ -1,0 +1,38 @@
+.synSection {
+    .sectionTitle {
+        font-size: 1.8rem;
+        color: var(--color-action);
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 3px solid var(--color-action);
+        font-weight: 600;
+        margin-top: 3rem;
+
+        @media (max-width: 768px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    .synText {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+            list-style-type: disc;
+            margin-left: 2.5rem;
+        }
+    }
+
+    .boldText {
+        font-weight: bolder;
+        font-size: larger;
+        margin-bottom: 0.5rem;
+    }
+
+    .listTitle {
+        margin-top: 0.3rem;
+    }
+
+}

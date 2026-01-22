@@ -19,7 +19,7 @@ export default function ProjectCard() {
 
   return (
     <ErrorBoundary>
-      <Title>{project()?.title || "Projet non trouvée"}</Title>
+      <Title>{project()?.title + " - Portfolio"}</Title>
 
       <Show 
         when={project()} 

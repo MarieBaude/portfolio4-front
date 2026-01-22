@@ -7,9 +7,9 @@ export default function Header() {
       <img src={ASSET_PATHS.home.presentation} alt="illu de présentation" />
       <div class="headerContent">
         <div class="headerTexts">
-          <h2>Portfolio</h2>
+          <h2 class="headerTitle">Portfolio</h2>
           <span>
-            Ce portfolio est le fruit de l'un de mes examen de mastère expert en ingénierie logiciel.
+            D’infographiste à développeuse full-stack, je conçois des logiciels avec une vision à la fois créative et rigoureuse.
           </span>
         </div>
         <button>

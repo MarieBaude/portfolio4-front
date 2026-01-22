@@ -4,7 +4,7 @@ import ContactComponent from '../components/contact/ContactComponent';
 export default function Contact() {
   return (
     <div>
-      <Title>Contact</Title>
+      <Title>Contact - Portfolio</Title>
       <ContactComponent />
     </div>
   );
