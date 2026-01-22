@@ -8,10 +8,17 @@ export default function ContactComponent() {
     message: string;
   } | null>(null);
 
-  const FORMSPREE_ENDPOINT = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT;
-
   const handleSubmit = async (e: Event) => {
     e.preventDefault();
+
+    const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT?.trim();
+
+    console.log("FORMSPREE (runtime):", FORMSPREE_ENDPOINT);
+
+    if (!FORMSPREE_ENDPOINT) {
+      throw new Error("Formspree endpoint non configuré");
+    }
+
     setIsSubmitting(true);
     setSubmitResult(null);
 
@@ -34,12 +41,6 @@ export default function ContactComponent() {
         });
         form.reset();
       } else {
-        const text = await response.text(); 
-        console.log("ENV:", import.meta.env);
-        console.log(
-          "FORMSPREE:",
-  import.meta.env.PUBLIC_FORMSPREE_ENDPOINT
-);
         throw new Error("Erreur lors de l'envoi");
       }
     } catch (error: any) {
