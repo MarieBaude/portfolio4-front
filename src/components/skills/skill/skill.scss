@@ -362,6 +362,12 @@
   }
 }
 
+.btnMoreDetails {
+  background: var(--color-quaternary);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+}
+
 // Responsive
 @media (max-width: 768px) {
   .projectsGrid {

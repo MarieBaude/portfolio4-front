@@ -4,6 +4,7 @@ export interface ProjectProof {
   description: string;
   achievements: string[];
   conclusion: string;
+  link?: string;
 }
 
 export interface ProjectURL {

@@ -5,7 +5,7 @@ export const HOBBIT: Hobbit[] = [
   {
     icon: MouseIcon,
     title: "Jeux vidéo",
-    subTitle: "J'aime les jeux vidéo pour le divertissement qu'ils apportent mais aussi pour leurs dimensions artistique complète : graphisme, musique, narration, game design. Ils offrent aussi un côté social, à travers le jeu en équipe et les rencontres humaines.",
+    subTitle: "J'aime les jeux vidéo pour le divertissement qu'ils apportent mais aussi pour leur dimension artistique complète : graphisme, musique, narration, game design. Ils offrent aussi un côté social, à travers le jeu en équipe et les rencontres humaines.",
   },
   {
     icon: BookIcon,

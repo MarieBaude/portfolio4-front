@@ -46,6 +46,9 @@ export default function Skill() {
                       </For>
                     </ul>
                     <p class="proofDescription">{proof.conclusion}</p>
+                    <a href={proof.link} target="_blank" rel="noopener noreferrer">
+                      <button class="btnMoreDetails">Plus de détails</button>
+                    </a>
                   </div>
                 )}
               </For>

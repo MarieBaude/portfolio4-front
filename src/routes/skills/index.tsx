@@ -17,13 +17,13 @@ export default function Skills() {
           {/* <h1 class="skillMainTitle">Compétences</h1> */}
           <section class="progress_bar_content">
             <div>
-              <h2 class="skillType">Technique</h2>
+              <h2 class="skillType">Techniques</h2>
               <For each={techSkills()}>
                 {(skill) => <ProgressBar skill={skill} />}
               </For>
               <br />
               <br />
-              <h2 class="skillType">Non technique</h2>
+              <h2 class="skillType">Non techniques</h2>
               <For each={nonTechSkills()}>
                 {(skill) => <ProgressBar skill={skill} />}
               </For>
