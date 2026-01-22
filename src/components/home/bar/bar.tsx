@@ -5,17 +5,17 @@ export default function Bar() {
     <section class="barContent">
       <a href="/skills">
         <div class="skillBar">
-          <h2>Compétences</h2>
+          <h2 class="titleBar">Compétences</h2>
         </div>
       </a>
       <a href="/projects">
         <div class="skillBar">
-          <h2>Réalisations</h2>
+          <h2 class="titleBar">Réalisations</h2>
         </div>
       </a>
-      <a href="/experience">
+      <a href="/contact">
         <div class="skillBar">
-          <h2>Parcours</h2>
+          <h2 class="titleBar">Contact</h2>
         </div>
       </a>
     </section>

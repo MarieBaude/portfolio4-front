@@ -1,25 +1,33 @@
 import { Title } from "@solidjs/meta";
-import { useLocation, useParams } from "@solidjs/router";
+import { Navigate, useLocation, useParams } from "@solidjs/router";
 import { Show } from "solid-js";
+import ErrorBoundary from "~/components/common/ErrorBoundary";
 import Project from "~/components/projets/project";
 import { PROJECTS_DATA } from "~/data/projets/projects.data";
-
-interface LocationState {
-  project?: { id: number; title: string };
-}
+import { createProjectRouteValidator } from "~/utils";
 
 export default function ProjectCard() {
-  // const location = useLocation<LocationState>();
-  // const project = location.state?.project;
-
   const params = useParams();
   const project = () =>
-    PROJECTS_DATA.find((project) => project.id === Number(params.id));
+    PROJECTS_DATA.find((project) => project.id === params.id);
+
+  const isValidProject = createProjectRouteValidator();
+  
+  if (!isValidProject(params.id)) {
+    return <Navigate href="/404" />;
+  }
 
   return (
-    <>
-      <Title>{project()?.title}</Title>
-      {project() ? <Project /> : <p>Projet non trouvée</p>}
-    </>
+    <ErrorBoundary>
+      <Title>{project()?.title || "Projet non trouvée"}</Title>
+
+      <Show 
+        when={project()} 
+        fallback={<Navigate href="/404" />}
+      >
+        <Project />
+      </Show>
+    </ErrorBoundary>
   );
 }
+

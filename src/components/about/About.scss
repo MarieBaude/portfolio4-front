@@ -1,0 +1,236 @@
+.presentation {
+  display: flex;
+  margin-bottom: 5rem;
+
+  .mainText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 3rem;
+
+    h2 {
+      text-align: left;
+    }
+
+    hr {
+      margin-bottom: 1rem;
+      width: 5rem;
+      align-self: flex-start;
+    }
+
+    p {
+      line-height: 1.6;
+      text-align: left;
+    }
+  }
+
+  .photo {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      margin-top: 2rem;
+      width: 70%;
+    }
+  }
+
+}
+
+.mainSectionTitle {
+  font-size: 1.8rem;
+    color: var(--color-action);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--color-action);
+    font-weight: 600;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+}
+
+// Section Valeurs
+.values-section {
+  margin-bottom: 5rem;
+
+  h3 {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .value-card {
+    background: var(--color-secondary);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid var(--color-action);
+
+    h4 {
+      margin-bottom: 1rem;
+      color: var(--color-action);
+      text-align: left;
+      font-size: larger;
+    }
+
+    p {
+      line-height: 1.6;
+      margin: 0;
+      color: var(--color-text);
+      text-align: left;
+    }
+  }
+}
+
+// Section Projet Professionnel
+.project-section {
+  margin-bottom: 5rem;
+
+  h3 {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .intro-text {
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    color: var(--color-tertiary);
+    text-align: left;
+  }
+
+  .project-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .project-card {
+    background: var(--color-secondary);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-action);
+
+    h4 {
+      margin-bottom: 1rem;
+      color: var(--color-action);
+      text-align: left;
+      font-size: larger;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.5rem;
+      color: var(--color-text);
+
+      li {
+        line-height: 1.8;
+        margin-bottom: 0.5rem;
+        text-align: left;
+        list-style-type: disc;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// Section Qualités Humaines
+.qualities-section {
+  margin-bottom: 5rem;
+
+  h3 {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .qualities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .quality-card {
+    background: var(--color-secondary);
+    border: 2px solid var(--color-action);
+    padding: 2rem;
+    border-radius: 12px;
+
+    h4 {
+      margin-bottom: 1rem;
+      color: var(--color-action);
+      text-align: left;
+      font-size: larger;
+    }
+
+    p {
+      line-height: 1.6;
+      margin: 0;
+      color: var(--color-text);
+      text-align: left;
+    }
+  }
+}
+
+.para {
+  margin-bottom: 2rem;
+}
+
+// Section Centres d'intérêt
+.hobbies-section {
+  margin-bottom: 5rem;
+
+  h2 {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .hobbies-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hobby-card {
+    background: var(--color-secondary);
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-action);
+
+    h4 {
+      margin-bottom: 1rem;
+      color: var(--color-action);
+      text-align: left;
+      font-size: larger;
+    }
+  }
+
+  .hobby-subtitle {
+    margin: 0;
+    color: var(--color-text);
+    line-height: 1.6;
+    text-align: left;
+  }
+}

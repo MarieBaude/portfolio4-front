@@ -16,7 +16,7 @@ export default function ProgressBar(props: ProgressBarProps) {
             alt={props.skill.title}
             class="skillsIcon"
           />
-          <h3>{props.skill.title}</h3>
+          <h3 class="progressBarTitle">{props.skill.title}</h3>
         </>
 
         <>

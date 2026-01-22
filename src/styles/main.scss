@@ -1,10 +1,15 @@
-@import "variables";
-@import "mixins";
-@import "reset";
-@import "base";
+@use "variables";
+@use "mixins";
+@use "reset";
+@use "base";
+
+html {
+  font-family: var(--font-primary);
+  font-size: large;
+}
 
 main {
-  width: 65% !important;
+  max-width: 72rem;
   margin: auto;
   margin-top: 5rem;
 

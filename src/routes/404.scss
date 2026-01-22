@@ -1,0 +1,158 @@
+/**
+ * 404 Page Styles
+ * 
+ * Styling for the enhanced 404 page
+ * Integrated with existing routing system
+ */
+
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 2rem;
+  background-color: var(--color-primary);
+}
+
+.not-found-container {
+  text-align: center;
+  max-width: 600px;
+  padding: 2rem;
+  background-color: var(--color-secondary);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.not-found-icon {
+  color: var(--color-action);
+  margin-bottom: 1.5rem;
+  
+  svg {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.not-found-title {
+  color: var(--color-text);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.not-found-message {
+  color: var(--color-text);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.not-found-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.not-found-suggestions {
+  text-align: left;
+  background-color: var(--color-quaternary);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  
+  h3 {
+    color: var(--color-text);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      margin-bottom: 0.5rem;
+      
+      a {
+        color: var(--color-action);
+        text-decoration: none;
+        font-weight: 500;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-block;
+  
+  &--primary {
+    background-color: var(--color-action);
+    color: white;
+    
+    &:hover {
+      background-color: var(--color-action);
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+  }
+  
+  &--secondary {
+    background-color: transparent;
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+    
+    &:hover {
+      background-color: var(--color-text);
+      color: var(--color-primary);
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .not-found-page {
+    padding: 1rem;
+  }
+  
+  .not-found-container {
+    padding: 1.5rem;
+  }
+  
+  .not-found-title {
+    font-size: 1.5rem;
+  }
+  
+  .not-found-message {
+    font-size: 1rem;
+  }
+  
+  .not-found-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .not-found-suggestions {
+    padding: 1rem;
+  }
+}

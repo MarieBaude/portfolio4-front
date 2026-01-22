@@ -1,98 +1,485 @@
 @use "../../styles/mixins"as *;
 
-body,
-html {
-  overflow-x: hidden;
+.projectContent {
   width: 100%;
+  min-height: 100vh;
+  background: var(--color-primary);
 }
 
-.projectText {
-  margin: 1rem;
-}
-
-.listLi {
-  list-style-type: disc;
-  padding-left: 0.3rem;
-}
-
-
-.imageSection {
+// Hero Section
+.projectHero {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  background-color: var(--color-quaternary);
-  padding: 2rem 0;
-  display: flex;
+  background: var(--color-quaternary);
+  padding: 4rem 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
 
-  >img {
-    width: 45%;
-    max-height: 400px;
-    object-fit: contain;
-    margin-right: 5%;
-    border-radius: 8px;
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    padding: 2rem 5%;
+    gap: 2rem;
   }
 
-  .headerSkill {
-    width: 45%;
-    color: var(--color-text);
-
-    .tagsList {
+  .heroContent {
+    .tagsContainer {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+
+      .tag {
+        background: rgba(59, 186, 156, 0.2);
+        color: var(--color-action);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border: 1px solid var(--color-action);
+      }
     }
 
-    .tag {
-      background: rgba(255, 255, 255, 0.2);
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
+    .projectTitle {
+      font-size: 3rem;
+      color: var(--color-action);
+      margin: 0 0 1rem 0;
+      font-weight: 700;
+      line-height: 1.2;
+
+      @media (max-width: 768px) {
+        font-size: 2.2rem;
+      }
+    }
+
+    .projectSummary {
+      font-size: 1.3rem;
+      color: var(--color-text);
+      line-height: 1.6;
+      margin: 0;
+
+      @media (max-width: 768px) {
+        font-size: 1.1rem;
+      }
     }
   }
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    padding: 1rem;
+  .heroImage {
+    width: 100%;
+    height: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 
-    >img {
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 1.5rem;
+    @media (max-width: 968px) {
+      height: 300px;
     }
 
-    .headerSkill {
+    img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
 
-.skills {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5rem;
+// Container
+.projectContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
 
-  .skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
+// Section Structure
+.projectSection {
+  margin-bottom: 4rem;
 
-    .skill-icon {
-      width: 5rem;
-      height: 5rem;
-    }
+  .sectionTitle {
+    font-size: 2rem;
+    color: var(--color-action);
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--color-action);
+    font-weight: 600;
 
-    .titleSkill {
-      font-size: larger;
-      margin-top: 0.5rem;
+    @media (max-width: 768px) {
+      font-size: 1.6rem;
     }
   }
 
-  .buttonStyle {
-    @include btn-base;
-    margin-top: 0.5rem;
+  .otherSection {
+    margin-top: 3rem;
+  }
+}
+
+// Content Card
+.contentCard {
+  background: var(--color-secondary);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 5px solid var(--color-action);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+  .textContent {
+    color: var(--color-text);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+}
+
+// Subsections
+.subsectionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.subsection {
+  background: var(--color-secondary);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--color-action);
+  margin-bottom: 1rem;
+
+  h4.subsectionTitle {
+    color: var(--color-action);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+  }
+}
+
+// Context Grid
+.contextTitle {
+  color: var(--color-action);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.contextGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+
+  .contextCard {
+    background: var(--color-secondary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid var(--color-action);
+    text-align: center;
+
+    .contextLabel {
+      color: var(--color-action);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 0 0 0.5rem 0;
+      letter-spacing: 1px;
+    }
+
+    .contextValue {
+      color: var(--color-text);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+}
+
+// Bullet Lists
+.bulletList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    color: var(--color-text);
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.4;
+
+    &:before {
+      content: "•";
+      color: var(--color-text);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+  }
+}
+
+// Phases Container
+.phasesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.phaseCard {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 1.5rem;
+  background: var(--color-secondary);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .phaseNumber {
+    width: 60px;
+    height: 60px;
+    background: var(--color-action);
+    color: var(--color-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+
+    @media (max-width: 768px) {
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+      margin: 0 auto;
+    }
+  }
+
+  .phaseContent {
+    .phaseTitle {
+      color: var(--color-action);
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 0 0 0.75rem 0;
+    }
+
+    .phaseDescription {
+      color: var(--color-text);
+      line-height: 1.7;
+      margin: 0 0 1.5rem 0;
+      font-size: 1.05rem;
+    }
+
+    .phaseAchievements {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        color: var(--color-text);
+        padding: 0.75rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+        line-height: 1.6;
+
+        &:before {
+          content: "✓";
+          color: var(--color-action);
+          position: absolute;
+          left: 0;
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+
+      }
+    }
+  }
+}
+
+// Actors Container
+.actorsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+
+  .actorCard {
+    background: var(--color-secondary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid var(--color-action);
+
+    .actorRole {
+      color: var(--color-action);
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
+    }
+
+    .actorDescription {
+      color: var(--color-text);
+      line-height: 1.7;
+      margin: 0;
+    }
+  }
+}
+
+// Results Grid
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+
+  .resultCard {
+    background: var(--color-secondary);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 5px solid var(--color-action);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+    .resultTitle {
+      color: var(--color-action);
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0 0 1.5rem 0;
+    }
+
+    .resultSubsection {
+      margin-bottom: 1.5rem;
+
+      .resultSubtitle {
+        color: var(--color-text);
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 0 0 0.75rem 0;
+      }
+    }
+
+    .prideSection,
+    .impactSection {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      background: var(--color-quaternary);
+      border-radius: 8px;
+      border-left: 3px solid var(--color-action);
+
+      .prideText,
+      .impactText {
+        color: var(--color-text);
+        line-height: 1.7;
+        margin: 0;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+// Future Timeline
+.futureTimeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .timelineCard {
+    background: var(--color-secondary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--color-action);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+
+    .timelineTitle {
+      color: var(--color-action);
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
+    }
+  }
+}
+
+// Critique Card
+.critiqueCard {
+  background: var(--color-secondary);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 5px solid var(--color-action);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+  .critiqueParagraph {
+    color: var(--color-text);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Skills Grid
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem;
+
+  .skillCard {
+    background: var(--color-secondary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: var(--color-action);
+      box-shadow: 0 8px 24px rgba(59, 186, 156, 0.2);
+    }
+
+    .skillIcon {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    .skillTitle {
+      color: var(--color-text);
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .projectContainer {
+    padding: 1rem;
+  }
+
+  .resultsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contextGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .actorsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .skillsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
