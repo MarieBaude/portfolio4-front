@@ -3,14 +3,8 @@ import "./Footer.scss";
 export default function Footer() {
   return (
     <footer>
-      <ul class="legal_text">
-        <li>
-          <a href="/mentions-legales">Mentions légales</a>
-        </li>
-        <li>
-          <a href="/confidentialite">Politique de confidentialité</a>
-        </li>
-      </ul>
+      <div> </div>
+
       <ul class="social_media">
         <a href="https://github.com/MarieBaude">
           <li>
@@ -43,7 +37,6 @@ export default function Footer() {
        
       </ul>
 
-      <hr />
 
       <span>© 2024 - {new Date().getFullYear()}</span>
     </footer>

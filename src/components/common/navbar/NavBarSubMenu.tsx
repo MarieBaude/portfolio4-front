@@ -1,6 +1,6 @@
 /**
  * NavBarSubMenu Component
- *
+ * 
  * Handles dropdown submenu functionality for navigation items
  * Displays main link with dropdown arrow and submenu items
  */
@@ -23,26 +23,33 @@ interface NavBarSubMenuProps {
   onLinkClick: (event: MouseEvent, href: string) => void;
 }
 
-export default function NavBarSubMenu({
-  mainLink,
-  subItems,
-  isOpen,
-  onToggle,
-  onLinkClick,
+export default function NavBarSubMenu({ 
+  mainLink, 
+  subItems, 
+  isOpen, 
+  onToggle, 
+  onLinkClick 
 }: NavBarSubMenuProps) {
+  // Gérer le clic sur le lien principal
   const handleMainLinkClick = (e: MouseEvent) => {
     e.preventDefault();
     onToggle(e);
   };
 
+  // Gérer le clic sur un élément du sous-menu
   const handleSubItemClick = (e: MouseEvent, href: string) => {
     e.stopPropagation();
     onLinkClick(e, href);
   };
+
   return (
     <li class="subMenu">
       <div class="subMenu-header" onClick={onToggle}>
-        <a href={mainLink.href} onClick={handleMainLinkClick} class="main-link">
+        <a 
+          href={mainLink.href} 
+          onClick={handleMainLinkClick}
+          class="main-link"
+        >
           {mainLink.label}
         </a>
         <svg
@@ -61,20 +68,23 @@ export default function NavBarSubMenu({
         <ul class="subMenu-list">
           {/* Lien vers la page mère */}
           <li>
-            <a
-              href={mainLink.href}
+            <a 
+              href={mainLink.href} 
               onClick={(e) => handleSubItemClick(e, mainLink.href)}
               class="submenu-parent-link"
             >
-              Toutes les {mainLink.label.toLowerCase()}
+              {mainLink.label === "Compétences" 
+                ? "Toutes les compétences" 
+                : "Tous les projets"
+              }
             </a>
           </li>
-
+          
           {/* Sous-éléments */}
           {subItems.map((item) => (
             <li>
-              <a
-                href={item.href}
+              <a 
+                href={item.href} 
                 onClick={(e) => handleSubItemClick(e, item.href)}
               >
                 {item.label}
