@@ -5,7 +5,7 @@ export default function ContactComponent() {
   const [isSubmitting, setIsSubmitting] = createSignal(false);
   const [submitResult, setSubmitResult] = createSignal<{ type: 'success' | 'error', message: string } | null>(null);
 
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/xjkoaoby";
+  const FORMSPREE_ENDPOINT = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT;
 
   const handleSubmit = async (e: Event) => {
     e.preventDefault();
