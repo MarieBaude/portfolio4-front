@@ -3,7 +3,10 @@ import { createSignal } from "solid-js";
 
 export default function ContactComponent() {
   const [isSubmitting, setIsSubmitting] = createSignal(false);
-  const [submitResult, setSubmitResult] = createSignal<{ type: 'success' | 'error', message: string } | null>(null);
+  const [submitResult, setSubmitResult] = createSignal<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
 
   const FORMSPREE_ENDPOINT = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT;
 
@@ -20,19 +23,25 @@ export default function ContactComponent() {
         method: "POST",
         body: formData,
         headers: {
-          "Accept": "application/json"
-        }
+          Accept: "application/json",
+        },
       });
 
       if (response.ok) {
-        setSubmitResult({ type: 'success', message: 'Message envoyé avec succès !' });
+        setSubmitResult({
+          type: "success",
+          message: "Message envoyé avec succès !",
+        });
         form.reset();
       } else {
-        const error = await response.json();
-        throw new Error(error.error || 'Erreur lors de l\'envoi');
+        const text = await response.text(); // ⬅️ IMPORTANT
+        throw new Error("Erreur lors de l'envoi");
       }
     } catch (error: any) {
-      setSubmitResult({ type: 'error', message: error.message || 'Une erreur est survenue' });
+      setSubmitResult({
+        type: "error",
+        message: error.message || "Une erreur est survenue",
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -47,16 +56,23 @@ export default function ContactComponent() {
       <div class="textContainer">
         <h2>Contact</h2>
         <p class="contactDescription">
-          Une question, un projet ou simplement envie d'échanger ? 
-          N'hésitez pas à me contacter via ce formulaire. 
+          Une question, un projet ou simplement envie d'échanger ? N'hésitez pas
+          à me contacter via ce formulaire.
         </p>
       </div>
 
       <div class="formContainer">
         {submitResult() && (
-          <div class={`alert ${submitResult()?.type === 'success' ? 'alert-success' : 'alert-error'}`}>
+          <div
+            class={`alert ${submitResult()?.type === "success" ? "alert-success" : "alert-error"}`}
+          >
             <span>{submitResult()?.message}</span>
-            <button type="button" class="close-btn" onClick={closeMessage} aria-label="Fermer le message">
+            <button
+              type="button"
+              class="close-btn"
+              onClick={closeMessage}
+              aria-label="Fermer le message"
+            >
               ×
             </button>
           </div>
@@ -67,7 +83,7 @@ export default function ContactComponent() {
           <input type="email" name="email" placeholder="Email" required />
           <textarea name="message" placeholder="Message" required></textarea>
           <button type="submit" disabled={isSubmitting()}>
-            {isSubmitting() ? 'Envoi en cours...' : 'Envoyer'}
+            {isSubmitting() ? "Envoi en cours..." : "Envoyer"}
           </button>
         </form>
       </div>
