@@ -1,6 +1,6 @@
 /**
  * NavBarSubMenu Component
- * 
+ *
  * Handles dropdown submenu functionality for navigation items
  * Displays main link with dropdown arrow and submenu items
  */
@@ -23,17 +23,28 @@ interface NavBarSubMenuProps {
   onLinkClick: (event: MouseEvent, href: string) => void;
 }
 
-export default function NavBarSubMenu({ 
-  mainLink, 
-  subItems, 
-  isOpen, 
-  onToggle, 
-  onLinkClick 
+export default function NavBarSubMenu({
+  mainLink,
+  subItems,
+  isOpen,
+  onToggle,
+  onLinkClick,
 }: NavBarSubMenuProps) {
+  const handleMainLinkClick = (e: MouseEvent) => {
+    e.preventDefault();
+    onToggle(e);
+  };
+
+  const handleSubItemClick = (e: MouseEvent, href: string) => {
+    e.stopPropagation();
+    onLinkClick(e, href);
+  };
   return (
     <li class="subMenu">
       <div class="subMenu-header" onClick={onToggle}>
-        <a href={mainLink.href}>{mainLink.label}</a>
+        <a href={mainLink.href} onClick={handleMainLinkClick} class="main-link">
+          {mainLink.label}
+        </a>
         <svg
           class={`icon ${isOpen() ? "open" : ""}`}
           xmlns="http://www.w3.org/2000/svg"
@@ -48,9 +59,24 @@ export default function NavBarSubMenu({
       </div>
       <Show when={isOpen()}>
         <ul class="subMenu-list">
+          {/* Lien vers la page mère */}
+          <li>
+            <a
+              href={mainLink.href}
+              onClick={(e) => handleSubItemClick(e, mainLink.href)}
+              class="submenu-parent-link"
+            >
+              Toutes les {mainLink.label.toLowerCase()}
+            </a>
+          </li>
+
+          {/* Sous-éléments */}
           {subItems.map((item) => (
             <li>
-              <a href={item.href} onClick={(e) => onLinkClick(e, item.href)}>
+              <a
+                href={item.href}
+                onClick={(e) => handleSubItemClick(e, item.href)}
+              >
                 {item.label}
               </a>
             </li>

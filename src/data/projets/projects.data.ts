@@ -4,7 +4,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: "wahis",
     title: "Wahis",
-    mainImage: "http://localhost:3000/public/images/Rectangle17.png",
+    mainImage: "/images/projects/wahis.png",
     summary: "Plateforme de surveillance des maladies animales pour l'OMSA",
     tags: ["Katalon", "Q.A", "Test automatisé", "End-to-end"],
 

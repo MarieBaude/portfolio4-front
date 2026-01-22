@@ -10,7 +10,7 @@ export const TIMELINE_DATA: TimelineItem[] = [
     diploma: "Titre professionnel Développeur d'application (Niveau 5)",
     city: "Valenciennes",
     campany: "POP School",
-    logo: "public/images/experience/popschool.png",
+    logo: "/images/experience/popschool.png",
     institutionDescription:
       "Pop School est un organisme de formation intensive dans le domaine de l'informatique. La formation que j'ai suivie couvrait l'équivalent du volume horaire informatique d'un DUT, sans les matières générales.",
     pedagogyVision:
@@ -27,7 +27,7 @@ export const TIMELINE_DATA: TimelineItem[] = [
     diploma: "Bachelor Concepteur Développeur d'Applications (Niveau 6)",
     city: "Valenciennes",
     campany: "Simplon",
-    logo: "public/images/experience/Logo_simplon.co.svg.png",
+    logo: "/images/experience/Logo_simplon.co.svg.png",
     institutionDescription:
       "Simplon est un réseau de formations aux métiers du numérique, reconnu pour sa pédagogie inclusive et orientée vers l'insertion professionnelle. Les formations ont une forte dimension projet.",
     pedagogyVision:
@@ -43,7 +43,7 @@ export const TIMELINE_DATA: TimelineItem[] = [
     title: "Conceptrice développeuse d'application",
     city: "Valenciennes",
     campany: "Fadmarts",
-    logo: "public/images/experience/icons8-tapis-80.png",
+    logo: "/images/experience/icons8-tapis-80.png",
     res: "Développeuse full-stack",
     status: "Stagiaire",
     missions: [
@@ -69,7 +69,7 @@ export const TIMELINE_DATA: TimelineItem[] = [
     diploma: "Mastère Expert en Ingénierie Logicielle (Niveau 7)",
     city: "Distanciel",
     campany: "ISCOD",
-    logo: "public/images/experience/iscod_logo.jpg",
+    logo: "/images/experience/iscod_logo.jpg",
     institutionDescription:
       "L'ISCOD est une école en ligne spécialisée dans les formations en alternance, délivrant des certifications RNCP reconnues par l'État. L'établissement propose des rentrées décalées tout au long de l'année et un rythme d'apprentissage modulable adapté aux contraintes de l'alternance.",
     pedagogyVision:
@@ -85,7 +85,7 @@ export const TIMELINE_DATA: TimelineItem[] = [
     title: "Ingénieure en étude et développement",
     city: "Lille",
     campany: "Kapela",
-    logo: "public/images/experience/kapela.png",
+    logo: "/images/experience/kapela.png",
     res: "Développeuse full-stack",
     status: "Alternance",
     missions: [

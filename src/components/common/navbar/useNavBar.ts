@@ -38,10 +38,18 @@ export function useNavBar() {
     }
   };
 
-  // Handle submenu toggle clicks
+  // Handle submenu toggle clicks - version corrigée
   const handleSubMenuClick = (event: MouseEvent, toggleFunction: () => void) => {
+    event.preventDefault();
     event.stopPropagation();
     toggleFunction();
+  };
+
+  // Handle hamburger click spécifiquement
+  const handleHamburgerClick = (event: MouseEvent) => {
+    event.preventDefault();
+    event.stopPropagation();
+    toggleMenu();
   };
 
   // Handle outside clicks to close menus
@@ -57,8 +65,9 @@ export function useNavBar() {
       const isSubMenuElement = target.closest('.subMenu');
       const isHamburger = target.closest('.hamburger');
       const isNavLink = target.closest('.navLinks > li > a');
+      const isMainLink = target.closest('.main-link');
 
-      if (!isSubMenuElement && !isHamburger && !isNavLink) {
+      if (!isSubMenuElement && !isHamburger && !isNavLink && !isMainLink) {
         closeAllMenus();
       }
     };
@@ -82,6 +91,7 @@ export function useNavBar() {
     toggleProjects,
     closeAllMenus,
     handleLinkClick,
-    handleSubMenuClick
+    handleSubMenuClick,
+    handleHamburgerClick 
   };
 }

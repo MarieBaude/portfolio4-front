@@ -20,7 +20,8 @@ export default function NavBar() {
     toggleSkills,
     toggleProjects,
     handleLinkClick,
-    handleSubMenuClick
+    handleSubMenuClick,
+    handleHamburgerClick 
   } = useNavBar();
 
   // Submenu configuration
@@ -64,7 +65,7 @@ export default function NavBar() {
       />
       
       <NavBarHamburger 
-        onClick={(e) => handleSubMenuClick(e, toggleMenu)} 
+        onClick={(e) => handleHamburgerClick} 
       />
       
       <NavBarMenu 

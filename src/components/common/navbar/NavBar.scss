@@ -143,3 +143,50 @@
     }
   }
 }
+
+// Ajoutez ces styles à votre fichier NavBar.scss
+.subMenu {
+  .subMenu-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    
+    a.main-link {
+      margin-right: 0.5rem;
+      flex-grow: 1;
+    }
+    
+    &:hover {
+      .icon {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+  
+  .submenu-parent-link {
+    font-weight: bold;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    
+    &:hover {
+      background: var(--color-action-light);
+    }
+  }
+}
+
+// Pour mobile
+@media (max-width: 768px) {
+  .subMenu {
+    .subMenu-header {
+      width: 100%;
+      justify-content: space-between;
+      
+      a.main-link {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
