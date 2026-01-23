@@ -39,12 +39,15 @@ export default function Skill() {
                 {(proof) => (
                   <div class="proofCard">
                     <h3 class="proofTitle">{proof.title}</h3>
+                    <span>Contexte : </span>
                     <p class="proofDescription">{proof.description}</p>
+                    <span>Actions : </span>
                     <ul class="proofAchievements">
                       <For each={proof.achievements}>
                         {(achievement) => <li>{achievement}</li>}
                       </For>
                     </ul>
+                    <span>Résultats : </span>
                     <p class="proofDescription">{proof.conclusion}</p>
                     <a href={proof.link} target="_blank" rel="noopener noreferrer">
                       <button class="btnMoreDetails">Plus de détails</button>

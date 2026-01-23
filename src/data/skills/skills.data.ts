@@ -15,7 +15,7 @@ export const SKILLS_DATA: Skill[] = [
         projectId: 1,
         title: "MPMT - Découverte d'Angular sur projet académique",
         description:
-          "Projet de validation du bloc de développement de ma formation, j'y ai passé plusieurs mois, travaillant le week-end dessus.",
+          "Projet de validation du bloc de développement de ma formation, j'y ai passé plusieurs mois, travaillant le week-end dessus. MPMT est une application qui centralise la gestion des utilisateurs, des projets et des tâches, avec un système de rôles et de permissions.",
         achievements: [
           "Développement de tableaux de bord et de gestion des tâches, avec affichage par statut et notifications",
           "Création de composants réutilisables et modales interactives pour la création et l'édition des tâches",
@@ -29,7 +29,7 @@ export const SKILLS_DATA: Skill[] = [
         projectId: 2,
         title: "T-Source - Premier gros projet Angular en entreprise",
         description:
-          "J'ai travaillé six mois sur ce projet, c'était mon premier gros projet Angular et surtout en entreprise avec rendu client.",
+          "J'ai travaillé six mois sur ce projet, c'était mon premier gros projet Angular et surtout en entreprise avec rendu client. T-Source est une application qui centralise la traçabilité des matières premières via des tableaux interactifs et d’autres fonctionnalités développées sur mesure.",
         achievements: [
           "Développement de tableaux interactifs, tri et filtres avancés",
           "Modales sécurisées avec verrouillage, pré-remplissage, duplication et historisation des actions",
@@ -84,7 +84,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 1,
         title: "MPMT - Première API REST en Java",
-        description: "Projet de validation du bloc de développement de ma formation, j'y ai passé plusieurs mois, travaillant le week-end dessus.",
+        description: "Projet de validation du bloc de développement de ma formation, j'y ai passé plusieurs mois, travaillant le week-end dessus. MPMT est une application qui centralise la gestion des utilisateurs, des projets et des tâches, avec un système de rôles et de permissions.",
         achievements: [
           "Conception et développement d'une API REST complète pour la gestion de projets et tâches",
           "Gestion des projets, tâches et rôles via API REST sécurisées",
@@ -97,7 +97,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 2,
         title: "T-Source - Application de traçabilité en production",
-        description: "J'ai travaillé six mois sur ce projet, c'était mon premier gros projet Spring et surtout en entreprise avec rendu client.",
+        description: "J'ai travaillé six mois sur ce projet, c'était mon premier gros projet Spring et surtout en entreprise avec rendu client. T-Source est une application qui centralise la traçabilité des matières premières via des tableaux interactifs et d’autres fonctionnalités développées sur mesure.",
         achievements: [
           "Modélisation de base de données MariaDB",
           "Historisation complète des modifications",
@@ -153,7 +153,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 1,
         title: "Nowelia - Développement frontend avec Next.js",
-        description: "L'équipe était compétente sur React mais le projet nécessitait du SSG, nous avons choisi de travailler avec Next.js.",
+        description: "L'équipe était compétente sur React mais le projet nécessitait du SSG, nous avons choisi de travailler avec Next.js. Nowelia est une plateforme de Web Novels permettant aux utilisateurs de découvrir, lire, commenter et créer des histoires.",
         achievements: [
           "Intégration responsive des pages avec Tailwind CSS",
           "Gestion dynamique du contenu avec SSR et SSG selon les besoins",
@@ -218,7 +218,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 1,
         title: "Nowelia - Développement d'une API REST complète",
-        description: "J'ai travaillé plusieurs mois sur l'API REST du projet Nowelia. Nous devions travailler sur un framework back end NodeJS et notre choix s'est porté sur NestJS.",
+        description: "J'ai travaillé plusieurs mois sur l'API REST du projet Nowelia. Nous devions travailler sur un framework back end NodeJS et notre choix s'est porté sur NestJS. Nowelia est une plateforme de Web Novels permettant aux utilisateurs de découvrir, lire, commenter et créer des histoires.",
         achievements: [
           "Mise en place des modèles de données avec Prisma",
           "Implémentation des CRUD pour Novels, Chapters, Comments et Tags",
@@ -272,7 +272,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 1,
         title: "Wahis - Développement d'une suite complète de tests automatisés",
-        description: "J'ai travaillé pendant neuf mois spécifiquement sur la partie test automatisé. Je débutais avec cet outil, n'ayant auparavant fait que quelques essais simples avec Playwright.",
+        description: "J'ai travaillé pendant neuf mois spécifiquement sur la partie test automatisé. Je débutais avec cet outil, n'ayant auparavant fait que quelques essais simples avec Playwright. Wahis est une application web de suivi en temps réel des foyers de maladies animales.",
         achievements: [
           "Développement de 28 tests end-to-end couvrant les fonctionnalités critiques",
           "Utilisation de l'interface d'enregistrement pour les parties simples des tests",
@@ -326,7 +326,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 1,
         title: "MPMT - Industrialisation complète du projet",
-        description: "Pour ce projet, j'ai utilisé Docker pour le déploiement du front-end et du back-end.",
+        description: "Pour ce projet, j'ai utilisé Docker pour le déploiement du front-end et du back-end. MPMT est une application qui centralise la gestion des utilisateurs, des projets et des tâches, avec un système de rôles et de permissions.",
         achievements: [
           "Dockerisation du frontend et backend",
           "Orchestration avec Docker Compose pour gérer les trois services",
@@ -339,7 +339,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 2,
         title: "Nowelia - Déploiement automatisé sur VPS",
-        description: "Sur ce projet, Docker a été intégré dès le départ pour assurer un déploiement fiable et automatisé.",
+        description: "Sur ce projet, Docker a été intégré dès le départ pour assurer un déploiement fiable et automatisé. Nowelia est une plateforme de Web Novels permettant aux utilisateurs de découvrir, lire, commenter et créer des histoires.",
         achievements: [
           "Déploiement de la base de données PostgreSQL dans un conteneur Docker",
           "Hébergement sur un VPS OVH avec configuration Docker",
@@ -395,7 +395,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 1,
         title: "Nowelia - Mise en place de l'organisation Scrum",
-        description: "En tant que Product Owner, j'ai structuré l'organisation Scrum pour une équipe de 2-3 personnes.",
+        description: "En tant que Product Owner, j'ai structuré l'organisation Scrum pour une équipe de 2-3 personnes. Nowelia est une plateforme de Web Novels permettant aux utilisateurs de découvrir, lire, commenter et créer des histoires.",
         achievements: [
           "Définition des epics et user stories",
           "Gestion du product backlog sur Jira et priorisation",
@@ -407,7 +407,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 2,
         title: "Wahis - Animation des points client hebdomadaires",
-        description: "En tant que QA, j'ai animé les réunions hebdomadaires avec l'équipe et le client.",
+        description: "En tant que QA, j'ai animé les réunions hebdomadaires avec l'équipe et le client. Wahis est une application web de suivi en temps réel des foyers de maladies animales.",
         achievements: [
           "Présentation de l'avancement des tests réalisés",
           "Soumission des fonctionnalités à tester la semaine suivante",
@@ -420,7 +420,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 3,
         title: "Gecko - Intégration dans un environnement Agile structuré",
-        description: "Au sein d'une équipe de quatre personnes, j'ai participé activement aux rituels Agile.",
+        description: "Au sein d'une équipe de quatre personnes, j'ai participé activement aux rituels Agile. Gecko est une application web de gestion regroupant l’ensemble des activités éditoriales : articles, stocks, fabrication, etc.",
         achievements: [
           "Daily stand-ups quotidiens de 15 minutes pour communiquer avancements et blocages",
           "Sprint de deux semaines",
@@ -479,7 +479,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 1,
         title: "Wahis - Animation et communication structurée",
-        description: "J'ai repris le poste de QA avec passation du travail et des points clients par mon prédécesseur.",
+        description: "J'ai repris le poste de QA avec passation du travail et des points clients par mon prédécesseur. Wahis est une application web de suivi en temps réel des foyers de maladies animales.",
         achievements: [
           "Présentation régulière et détaillée de l'avancement des tests",
           "Recueil des feedbacks sur fonctionnalités critiques et à risque",
@@ -492,7 +492,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 2,
         title: "T-Source - Gestion d'une relation difficile",
-        description: "Seule développeuse sur le projet durant les premiers mois, j'ai géré la communication avec un client exigeant du secteur de la parfumerie.",
+        description: "Seule développeuse sur le projet durant les premiers mois, j'ai géré la communication avec un client exigeant du secteur de la parfumerie. T-Source est une application qui centralise la traçabilité des matières premières via des tableaux interactifs et d’autres fonctionnalités développées sur mesure.",
         achievements: [
           "Clarification des besoins fonctionnels métier complexes",
           "Démonstrations régulières de l'application",
@@ -546,7 +546,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 1,
         title: "Gecko - Rigueur et qualité dans une architecture complexe",
-        description: "Sur ce projet, j'ai travaillé sur une application existante en JavaScript et PHP natif avec une attention particulière à la qualité.",
+        description: "Sur ce projet, j'ai travaillé sur une application existante en JavaScript et PHP natif avec une attention particulière à la qualité. Gecko est une application web de gestion regroupant l’ensemble des activités éditoriales : articles, stocks, fabrication, etc.",
         achievements: [
           "Respect de l'architecture existante",
           "Séparation claire des responsabilités malgré de gros fichiers",
@@ -559,7 +559,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 2,
         title: "Wahis - Documentation et maintenabilité des tests",
-        description: "J'ai repris un projet de tests automatisés insuffisamment documentés, ce qui ralentissait les interventions sur les anciens tests.",
+        description: "J'ai repris un projet de tests automatisés insuffisamment documentés, ce qui ralentissait les interventions sur les anciens tests. Wahis est une application web de suivi en temps réel des foyers de maladies animales.",
         achievements: [
           "Élaboration d'un plan de test détaillé en français et anglais",
           "Documentation systématique de chaque test",
@@ -572,7 +572,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 3,
         title: "Nowelia - Qualité du cycle de développement",
-        description: "Sur ce projet académique, nous avons mis en place des pratiques de qualité dès le départ.",
+        description: "Sur ce projet académique, nous avons mis en place des pratiques de qualité dès le départ. Nowelia est une plateforme de Web Novels permettant aux utilisateurs de découvrir, lire, commenter et créer des histoires.",
         achievements: [
           "Tests unitaires backend et frontend",
           "Tests d'intégration",
@@ -633,7 +633,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 1,
         title: "MPMT - De la conception à l'industrialisation",
-        description: "En totale autonomie sur ce projet scolaire, j'ai dû organiser mon travail en plus des cours et de l'alternance.",
+        description: "En totale autonomie sur ce projet scolaire, j'ai dû organiser mon travail en plus des cours et de l'alternance. MPMT est une application qui centralise la gestion des utilisateurs, des projets et des tâches, avec un système de rôles et de permissions.",
         achievements: [
           "Établissement d'un rythme régulier : tous les vendredis et week-ends aux mêmes heures",
           "Mise en place d'un Kanban sur Trello avec tickets détaillés pour ne jamais perdre le fil",
@@ -646,7 +646,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 2,
         title: "T-Source - Montée en compétences rapide",
-        description: "J'ai découvert Angular et Spring Boot, que je n'avais jamais pratiqués en étant seule sur un projet.",
+        description: "J'ai découvert Angular et Spring Boot, que je n'avais jamais pratiqués en étant seule sur un projet. T-Source est une application qui centralise la traçabilité des matières premières via des tableaux interactifs et d’autres fonctionnalités développées sur mesure.",
         achievements: [
           "Apprentissage autodidacte d'Angular et Spring Boot",
           "Recherche de ressources",
@@ -658,7 +658,7 @@ export const SKILLS_DATA: Skill[] = [
       {
         projectId: 3,
         title: "Wahis - QA et communication",
-        description: "Sur ma première mission QA, j'ai développé en autonomie une suite complète de tests automatisés.",
+        description: "Sur ma première mission QA, j'ai développé en autonomie une suite complète de tests automatisés. Wahis est une application web de suivi en temps réel des foyers de maladies animales.",
         achievements: [
           "Élaboration du plan de test (28 tests end-to-end) sans référence préexistante",
           "Développement des scénarios en Katalon",

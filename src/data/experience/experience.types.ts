@@ -16,7 +16,7 @@ export interface BaseTimelineItem {
 
 export interface WorkTimelineItem extends BaseTimelineItem {
   type: "work";
-  res: string; 
+  responsabilities: string[];
   status?: string;
   missions: string[];
   achievements?: { title: string; url?: string }[];

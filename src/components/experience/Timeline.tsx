@@ -84,11 +84,6 @@ export default function Timeline(props: TimelineProps) {
             </a>
             <Show when={isWorkItem(selectedItem()!)}>
               <div class="work-details">
-                <div class="detail-section">
-                  <h3>Responsabilité</h3>
-                  <p>{(selectedItem() as WorkTimelineItem).res}</p>
-                </div>
-
                 <Show when={(selectedItem() as WorkTimelineItem).status}>
                   <div class="detail-section">
                     <h3>Statut</h3>
@@ -97,6 +92,19 @@ export default function Timeline(props: TimelineProps) {
                     </p>
                   </div>
                 </Show>
+
+                <div class="detail-section">
+                  <h3>Responsabilité</h3>
+                  <ul class="details-list">
+                    <For
+                      each={
+                        (selectedItem() as WorkTimelineItem).responsabilities
+                      }
+                    >
+                      {(responsability) => <li>{responsability}</li>}
+                    </For>
+                  </ul>
+                </div>
 
                 <div class="detail-section">
                   <h3>Détail des missions</h3>
@@ -111,27 +119,45 @@ export default function Timeline(props: TimelineProps) {
                   <div class="detail-section">
                     <h3>Réalisations</h3>
                     <div class="projectsGrid">
-                      <For each={(selectedItem() as WorkTimelineItem).achievements}>
+                      <For
+                        each={(selectedItem() as WorkTimelineItem).achievements}
+                      >
                         {(achievement) => {
-                          const projectId = achievement.url?.replace('/projects/', '').replace('/', '');
-                          const projectData = PROJECTS_DATA.find(p => p.id === projectId);
-                          
+                          const projectId = achievement.url
+                            ?.replace("/projects/", "")
+                            .replace("/", "");
+                          const projectData = PROJECTS_DATA.find(
+                            (p) => p.id === projectId,
+                          );
+
                           return (
-                            <Show 
-                              when={achievement.url} 
+                            <Show
+                              when={achievement.url}
                               fallback={
                                 <div class="projectCard no-link">
-                                  <span class="projectTitle">{achievement.title}</span>
+                                  <span class="projectTitle">
+                                    {achievement.title}
+                                  </span>
                                 </div>
                               }
                             >
-                              <a href={achievement.url} class="projectCard" target="_blank">
+                              <a
+                                href={achievement.url}
+                                class="projectCard"
+                                target="_blank"
+                              >
                                 <Show when={projectData?.mainImage}>
                                   <div class="projectImageWrapper">
-                                    <img src={projectData!.mainImage} alt={achievement.title} class="projectImage" />
+                                    <img
+                                      src={projectData!.mainImage}
+                                      alt={achievement.title}
+                                      class="projectImage"
+                                    />
                                   </div>
                                 </Show>
-                                <span class="projectTitle">{achievement.title}</span>
+                                <span class="projectTitle">
+                                  {achievement.title}
+                                </span>
                               </a>
                             </Show>
                           );
@@ -146,7 +172,11 @@ export default function Timeline(props: TimelineProps) {
                     <h3>Compétences associées</h3>
                     <div class="skills-tags">
                       <For each={(selectedItem() as WorkTimelineItem).skills}>
-                        {(skill) => <span class="skill-tag">{skill}</span>}
+                        {(skill) => (
+                          <a href="/skills">
+                            <span class="skill-tag">{skill}</span>
+                          </a>
+                        )}
                       </For>
                     </div>
                   </div>
