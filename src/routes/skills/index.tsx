@@ -1,4 +1,3 @@
-import { Title } from "@solidjs/meta";
 import "./skills.scss";
 import { createMemo, For } from "solid-js";
 import { SKILLS_DATA } from "~/data/skills/skills.data";

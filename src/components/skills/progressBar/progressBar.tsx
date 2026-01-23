@@ -1,4 +1,3 @@
-import { A } from "@solidjs/router";
 import { Show } from "solid-js";
 import { Skill } from "~/data/skills/skills.types";
 import "./progressBar.scss";
@@ -9,7 +8,7 @@ interface ProgressBarProps {
 
 export default function ProgressBar(props: ProgressBarProps) {
   return (
-    <A href={`/skills/${props.skill.id}`} class="skillCard">
+    <a href={`/skills/${props.skill.id}`} class="skillCard">
       <div class="skillHeader">
         <img
           src={props.skill.icon}
@@ -36,6 +35,6 @@ export default function ProgressBar(props: ProgressBarProps) {
           />
         </div>
       </div>
-    </A>
+    </a>
   );
 }
