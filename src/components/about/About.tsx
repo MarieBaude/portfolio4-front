@@ -146,7 +146,7 @@ export default function AboutComponent() {
             <h4>Persévérance</h4>
             <p>
               Lorsque je rencontre un blocage, je prends une pause, j'essaie une
-              autre approche, et en dernier recours je demande de l'aide. Je
+              autre approche, et si nécessaire, je n'hésite pas à solliciter de l'aide. Je
               n'ai jamais abandonné un projet.
             </p>
           </div>

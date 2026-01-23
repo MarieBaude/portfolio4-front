@@ -43,8 +43,8 @@ export const SKILLS_DATA: Skill[] = [
     crit: {
       paragraphs: [
         "Je suis à l'aise avec les bases d'Angular : création de composants, gestion des modules, services et routing. J'ai travaillé à la fois sur la version 15 et la 19, ce qui m'a permis d'appréhender deux approches assez différentes (modules classiques vs standalone components). Aujourd'hui, je ne me contente plus de construire des composants correspondant aux pages, mais je commence à concevoir des composants comme de vraies fonctionnalités réutilisables, ce qui limite les répétitions et améliore la structure du projet. Ma marge de progression reste importante sur certains points avancés comme la gestion d'état avec RxJS ou NgRx, et les optimisations de performance complexes.",
-        "Angular occupe une place centrale dans mon profil : c'est mon framework front principal et celui dans lequel je me sens le plus à l'aise. J'apprécie particulièrement la manière dont il impose une structure claire, avec une séparation nette entre fichiers et dossiers (HTML, CSS, TS, tests). Cette organisation correspond bien à ma façon de travailler et renforce la lisibilité du code.",
-        "Ma montée en compétence a été facilitée par mon expérience préalable en TypeScript et React. Après une première impression de complexité, j'ai rapidement compris qu'avoir beaucoup de fichiers légers est une force plutôt qu'une contrainte. Cette organisation me convient et facilite la maintenance.",
+        "Angular occupe une place centrale dans mon profil : c'est mon framework front principal et celui avec lequel je me sens le plus à l'aise. J'apprécie particulièrement la manière dont il impose une structure claire, avec une séparation nette entre fichiers et dossiers (HTML, CSS, TS, tests). Cette organisation correspond bien à ma façon de travailler et renforce la lisibilité du code.",
+        "Ma montée en compétence a été facilitée par mon expérience préalable en TypeScript et React. Après une première impression de complexité, j'ai rapidement compris qu'organiser le code en de nombreux fichiers légers est une force plutôt qu'une contrainte. Cette organisation me convient et facilite la maintenance.",
       ],
       advice: [
         "Bien séparer et nommer les composants dès le départ pour éviter la confusion",
@@ -115,14 +115,14 @@ export const SKILLS_DATA: Skill[] = [
         "Mon apprentissage s'est fait progressivement, d'abord sur un projet académique (MPMT) sans pression, puis sur un projet client (T-Source) où j'ai dû monter en compétence rapidement. Cette double expérience m'a permis de consolider les bases puis de les appliquer en contexte réel.",
       ],
       advice: [
-        "Avoir déjà une base en Java avant d'attaquer Spring Boot",
+        "Possèder déjà une base en Java avant d'aborder Spring Boot",
         "Pour un débutant complet, commencer par un framework plus simple pour une montée en compétence plus progressive",
         "Bien nommer fonctions, variables et fichiers : le langage Java est verbeux et impose une rigueur",
-        "Ne pas négliger la documentation et les commentaires, c'est encore plus important qu'ailleurs",
+        "Ne sous-estimez pas la documentation et les commentaires : ils sont essentiels face à la complexité de Spring Boot",
       ],
     },
     evol: {
-      text: "Je souhaite approfondir Spring Boot, mon framework backend principal, pour gérer des projets plus volumineux et complexes. Mon objectif à moyen terme est de renforcer mes compétences sur la sécurité, la scalabilité et les architectures distribuées. Spring Boot étant très utilisé en entreprise, je consolide mes compétences directement sur le terrain.",
+      text: "Je souhaite approfondir Spring Boot, mon framework backend principal, pour gérer des projets plus volumineux et complexes. Mon objectif à moyen terme est de renforcer mes compétences sur la sécurité, la scalabilité et les architectures distribuées. Spring Boot étant très utilisé en entreprise, je consolide mes compétences directement par la pratique.",
       roadmap: [
         "Approfondir Spring Security (authentification complexe, OAuth2, JWT, gestion fine des rôles)",
         "Explorer les architectures microservices avec Spring Cloud",

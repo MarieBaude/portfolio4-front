@@ -5,7 +5,7 @@ export const HOBBIT: Hobbit[] = [
   {
     icon: MouseIcon,
     title: "Jeux vidéo",
-    subTitle: "J'aime les jeux vidéo pour le divertissement qu'ils apportent mais aussi pour leur dimension artistique complète : graphisme, musique, narration, game design. Ils offrent aussi un côté social, à travers le jeu en équipe et les rencontres humaines.",
+    subTitle: "J'aime les jeux vidéo pour le divertissement qu'ils apportent mais aussi pour leur dimension artistique complète : graphisme, musique, narration, game design. Ils ont également une dimension sociale, que ce soit par le jeu en équipe ou les rencontres qu'ils permettent.",
   },
   {
     icon: BookIcon,
@@ -15,6 +15,6 @@ export const HOBBIT: Hobbit[] = [
   {
     icon: HeadphonesIcon,
     title: "Musique",
-    subTitle: "La musique accompagne tous mes moments : travail, détente, repos. J'écoute de tout, du lofi hip-hop au métal, en passant par des OST de jeux vidéo et de films. Elle influence mon humeur et ma concentration.",
+    subTitle: "La musique rythme mon quotidien, qu'il s'agisse de me concentrer au travail, de me détendre ou de me reposer. J'écoute de tout, du lofi hip-hop au métal, en passant par des OST de jeux vidéo et de films. Elle influence mon humeur et ma concentration.",
   },
 ];
