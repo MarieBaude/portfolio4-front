@@ -20,6 +20,7 @@ export interface Skill {
   level: number;
   color: string;
   def: string;
+  intro: string;
   proofs: ProjectProof[];
   crit: {
     paragraphs: string[];

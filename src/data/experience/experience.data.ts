@@ -60,7 +60,7 @@ export const TIMELINE_DATA: TimelineItem[] = [
       "Implémentation des interfaces frontend en utilisant le moteur de templates PUG et le framework CSS TailwindCSS",
     ],
     achievements: [
-      { title: "Fadmarts (non disponible)" },
+      { title: "Fadmarts (Projet non présenté et site indisponible)" },
     ],
     skills: ["NestJS", "PUG", "Conception de base de donnée", "PostgreSQL"],
     position: "left",

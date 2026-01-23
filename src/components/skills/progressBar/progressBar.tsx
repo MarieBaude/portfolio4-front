@@ -1,4 +1,5 @@
 import { A } from "@solidjs/router";
+import { Show } from "solid-js";
 import { Skill } from "~/data/skills/skills.types";
 import "./progressBar.scss";
 
@@ -8,32 +9,33 @@ interface ProgressBarProps {
 
 export default function ProgressBar(props: ProgressBarProps) {
   return (
-    <>
-      <A href={`/skills/${props.skill.id}`}>
-        <>
-          <img
-            src={props.skill.icon}
-            alt={props.skill.title}
-            class="skillsIcon"
+    <A href={`/skills/${props.skill.id}`} class="skillCard">
+      <div class="skillHeader">
+        <img
+          src={props.skill.icon}
+          alt={props.skill.title}
+          class="skillIcon"
+        />
+        <div class="skillTitleContainer">
+          <h3 class="skillTitle">{props.skill.title}</h3>
+          <Show when={props.skill.intro}>
+            <p class="skillIntro">{props.skill.intro}</p>
+          </Show>
+        </div>
+      </div>
+
+      <div class="progressBarWrapper">
+        <span class="skillLevel">{props.skill.level}%</span>
+        <div class="progressBarContainer">
+          <div
+            class="progressBarFill"
+            style={{
+              width: `${props.skill.level}%`,
+              "background-color": `${props.skill.color}`,
+            }}
           />
-          <h3 class="progressBarTitle">{props.skill.title}</h3>
-        </>
-
-        <>
-          <div class="basicBar">
-            <div
-              style={{
-                width: `${props.skill.level}%`,
-                height: "20px",
-                "background-color": `${props.skill.color}`,
-                transition: "width 0.5s ease-out",
-              }}
-            />
-          </div>
-
-          <span>{props.skill.level}%</span>
-        </>
-      </A>
-    </>
+        </div>
+      </div>
+    </A>
   );
 }

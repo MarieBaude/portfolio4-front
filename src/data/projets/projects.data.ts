@@ -4,7 +4,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: "wahis",
     title: "Wahis",
-    mainImage: "/images/projects/wahis.png",
+    mainImage: "/images/projects/wahis.jpg",
     summary: "Plateforme de surveillance des maladies animales pour l'OMSA",
     tags: ["Katalon", "Q.A", "Test automatisé", "End-to-end"],
 
@@ -216,7 +216,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: "tsource",
     title: "T-Source",
-    mainImage: "/images/Rectangle17.png",
+    mainImage: "/images/projects/tsource.png",
     summary: "Application de traçabilité des matières premières pour Takasago",
     tags: ["Angular", "Spring Boot", "MariaDB", "Full-stack"],
 
@@ -424,7 +424,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: "mpmt",
     title: "MPMT",
-    mainImage: "/images/Rectangle17.png",
+    mainImage: "/images/projects/mpmt.png",
     summary: "Outil interne de gestion de projets",
     tags: ["Angular", "Spring Boot", "PostgreSQL", "Docker", "CI/CD"],
 
@@ -648,7 +648,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: "nowelia",
     title: "Nowelia",
-    mainImage: "/images/Rectangle17.png",
+    mainImage: "/images/projects/nowelia.png",
     summary: "Plateforme communautaire de Web Novels",
     tags: ["NestJS", "Next.js", "React Native", "Electron", "PostgreSQL"],
 
@@ -896,7 +896,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: "gecko",
     title: "Gecko",
-    mainImage: "/images/Rectangle17.png",
+    mainImage: "/images/projects/gecko.png",
     summary: "Module Fabrication pour l'application de gestion éditoriale",
     tags: ["jQuery", "PHP", "PostgreSQL", "Bootstrap"],
 
