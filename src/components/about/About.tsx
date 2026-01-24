@@ -1,5 +1,6 @@
 import { HOBBIT } from "~/data/about/about.data";
 import "./About.scss";
+import { parseFormattedText } from "~/utils/textParser"
 
 export default function AboutComponent() {
   return (
@@ -8,13 +9,9 @@ export default function AboutComponent() {
         <div class="mainText">
           <h3 class="mainSectionTitle">Présentation</h3>
           <p>
-            En alternance chez Kapela en tant que développeuse full-stack, en
-            master d'expert en ingénierie logicielle. Mon parcours professionnel
-            a débuté en tant qu'infographiste avant une réorientation vers le
-            développement web. Après une première formation puis un bachelor en
-            conception développeur d'applications (CDA), j'ai intégré un mastère
-            en alternance pour approfondir mes compétences techniques et monter
-            en autonomie.
+            {parseFormattedText(
+            "En alternance chez **Kapela** en tant que développeuse full-stack, en **mastère d'expert en ingénierie logicielle**. Mon parcours professionnel a débuté en tant qu'infographiste avant une réorientation vers le développement web. Après une première formation puis un bachelor en conception développeur d'applications (CDA), j'ai intégré un mastère en alternance pour approfondir mes compétences **techniques** et monter en **autonomie**."
+            )}
           </p>
         </div>
         <div>
@@ -53,7 +50,7 @@ export default function AboutComponent() {
       </section>
 
       <section class="project-section">
-        <h3 class="mainSectionTitle">Mon projet professionnel</h3>
+        <h3 class="mainSectionTitle">Mon projet professionnel et personnel</h3>
         <p class="intro-text">
           Ce qui me plaît profondément dans le métier de développeur, c'est la
           satisfaction de faire fonctionner des systèmes, de voir une

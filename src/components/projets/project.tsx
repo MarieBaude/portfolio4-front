@@ -3,6 +3,7 @@ import "./project.scss";
 import { PROJECTS_DATA } from "~/data/projets/projects.data";
 import { SKILLS_DATA } from "~/data/skills/skills.data";
 import { For, Show } from "solid-js";
+import { parseFormattedText } from "~/utils/textParser";
 
 export default function Project() {
   const params = useParams();
@@ -35,7 +36,9 @@ export default function Project() {
         <section class="projectSection">
           <h2 class="sectionTitle">Présentation du projet</h2>
           <div class="contentCard">
-            <p class="textContent">{project()?.presentation}</p>
+            <p class="textContent">
+              {project()?.presentation && parseFormattedText(project()!.presentation)}
+            </p>
           </div>
         </section>
 

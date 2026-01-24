@@ -1,7 +1,6 @@
 import { Title } from "@solidjs/meta";
 import { PROJECTS_DATA } from "~/data/projets/projects.data";
 import "./works.scss";
-import { A } from "@solidjs/router";
 import { For, Show } from "solid-js";
 
 export default function Works() {
@@ -19,7 +18,7 @@ export default function Works() {
         <div class="projectsGrid">
           <For each={featuredProjects}>
             {(project) => (
-              <A href={`/projects/${project.id}`} class="projectCard">
+              <a href={`/projects/${project.id}`} class="projectCard">
                 <Show when={project.mainImage}>
                   <div class="projectImageWrapper">
                     <img
@@ -37,9 +36,14 @@ export default function Works() {
                     </For>
                   </div>
                 </Show>
-              </A>
+              </a>
             )}
           </For>
+        </div>
+        <div class="divBtb">
+          <a href="/projects" target="_blank">
+            <button class="btnMoreWorks">Voir tous les projets</button>
+          </a>
         </div>
       </Show>
     </section>

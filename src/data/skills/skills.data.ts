@@ -23,7 +23,7 @@ export const SKILLS_DATA: Skill[] = [
           "Tests unitaires, intégration CI/CD et Dockerisation",
         ],
         conclusion:
-          "Ce projet m'a permis de découvrir Angular seule, tranquillement afin de prendre mes marques sur ce framework.",
+          "Ce projet m'a permis de découvrir **Angular seule**, tranquillement afin de prendre mes marques sur ce framework.",
         link: '/projects/mpmt'
       },
       {
@@ -37,7 +37,7 @@ export const SKILLS_DATA: Skill[] = [
           "Optimisation des performances pour gérer des imports de milliers de lignes de données",
         ],
         conclusion:
-          "Le front-end de l'application couvre les attentes clients, il y a une vraie plus-value, surtout en termes d'ergonomie par rapport à leur solution précédente : Excel.",
+          "Le front-end de l'application couvre les **attentes clients**, il y a une vraie plus-value, surtout en termes d'ergonomie par rapport à leur solution précédente : Excel.",
         link: '/projects/tsource'
       },
     ],
@@ -93,7 +93,7 @@ export const SKILLS_DATA: Skill[] = [
           "Mise en place de tests unitaires backend avec JUnit et intégration dans un pipeline CI/CD",
           "Industrialisation complète : Dockerisation, automatisation des builds et déploiement",
         ],
-        conclusion: "Ma première API REST en Java avec Spring Boot réalisée seule, j'ai pu découvrir le framework sans pression.",
+        conclusion: "Ma première API REST en Java avec Spring Boot réalisée seule, j'ai pu découvrir le framework **sans pression**.",
         link: '/projects/mpmt'
       },
       {
@@ -106,7 +106,7 @@ export const SKILLS_DATA: Skill[] = [
           "Contrôle d'accès aux données selon les profils utilisateurs",
           "Gestion d'imports massifs depuis Excel avec optimisation des performances (traitement batch)",
         ],
-        conclusion: "L'API Spring Boot assure des échanges de données rapides et fiables, et l'application est utilisée par Takasago depuis son déploiement.",
+        conclusion: "L'API Spring Boot assure des échanges de données rapides et fiables, et l'application est **utilisée par Takasago** depuis son déploiement.",
         link: '/projects/tsource'
       },
     ],
@@ -164,7 +164,7 @@ export const SKILLS_DATA: Skill[] = [
           "Formulaire de création d'histoire avec upload d'image et tags multiples",
           "Tests unitaires avec Jest",
         ],
-        conclusion: "L'interface permet d'utiliser une partie des fonctionnalités développées côté back-end. L'association Next.js / TailwindCSS a permis de créer rapidement un MVP.",
+        conclusion: "L'interface permet d'utiliser une partie des fonctionnalités développées côté back-end. L'association Next.js / TailwindCSS a permis de créer **rapidement un MVP**.",
         link: '/projects/nowelia'
       },
       {
@@ -178,7 +178,6 @@ export const SKILLS_DATA: Skill[] = [
           "Mur d'images responsive",
         ],
         conclusion: "L'application reprend les principales fonctionnalités de Pinterest et a été déployée avec succès.",
-        link: '#'
       },
     ],
     crit: {
@@ -230,7 +229,7 @@ export const SKILLS_DATA: Skill[] = [
           "Tests unitaires et d'intégration",
           "Documentation Swagger automatique de l'API",
         ],
-        conclusion: "Le back-end est fonctionnel, documenté et testé, permettant une utilisation fluide par les trois clients distincts (web, mobile, desktop).",
+        conclusion: "Le back-end est fonctionnel, documenté et testé, permettant une **utilisation fluide par les trois clients distincts** (web, mobile, desktop).",
         link: '/projects/nowelia'
       },
     ],
@@ -285,7 +284,7 @@ export const SKILLS_DATA: Skill[] = [
           "Organisation des fichiers objets, test cases, test suite",
           "Maintenance continue face aux évolutions de l'application (adaptation des XPath, mise à jour des scénarios)",
         ],
-        conclusion: "Ces scénarios de test ont permis de détecter plusieurs régressions avant la mise en production. Résultat : des livrables plus stables et une meilleure confiance côté client.",
+        conclusion: "Ces scénarios de test ont permis de détecter plusieurs régressions avant la mise en production. Résultat : des livrables plus stables et une meilleure **confiance côté client**.",
         link: '/projects/wahis'
       },
     ],
@@ -339,7 +338,7 @@ export const SKILLS_DATA: Skill[] = [
           "Publication des images sur Docker Hub",
           "Pipeline CI/CD (GitHub Actions) automatisant le build, les tests et le déploiement",
         ],
-        conclusion: "Les images générées étaient récupérables par d'autres développeurs, le correcteur a validé le déploiement sans difficulté.",
+        conclusion: "Les images générées étaient récupérables par d'autres développeurs, le correcteur a validé le **déploiement sans difficulté**.",
         link: '/projects/mpmt'
       },
       {
@@ -351,7 +350,7 @@ export const SKILLS_DATA: Skill[] = [
           "Hébergement sur un VPS OVH avec configuration Docker",
           "Mise en place d'un déploiement continu : push sur la branche principale → build automatique → mise à jour en production",
         ],
-        conclusion: "Cela a permis d'avoir une application se déployant automatiquement en ligne juste avec un push dans une branche git.",
+        conclusion: "Cela a permis d'avoir une application se **déployant automatiquement** en ligne juste avec un push dans une branche git.",
         link: '/projects/nowelia'
       },
     ],
@@ -408,7 +407,7 @@ export const SKILLS_DATA: Skill[] = [
           "Gestion du product backlog sur Jira et priorisation",
           "Animation des rituels (sprint planning, daily, démos, rétrospectives)",
         ],
-        conclusion: "Cette organisation a permis de valider le diplôme CDA et de livrer le projet conforme aux attentes.",
+        conclusion: "Cette organisation a permis de **valider le diplôme CDA** et de livrer le projet conforme aux attentes.",
         link: '/projects/nowelia'
       },
       {
@@ -421,7 +420,7 @@ export const SKILLS_DATA: Skill[] = [
           "Recueil des feedbacks et fonctionnalités à risque",
           "Création de tickets de bugs avec captures et étapes de reproduction",
         ],
-        conclusion: "La satisfaction client a été très bonne, saluant la qualité des rapports et la communication transparente.",
+        conclusion: "La **satisfaction client** a été très bonne, saluant la qualité des rapports et la communication transparente.",
         link: '/projects/wahis'
       },
       {
@@ -434,7 +433,7 @@ export const SKILLS_DATA: Skill[] = [
           "Découpage rigoureux en tickets avec estimations et respect du backlog",
           "Démos bi-mensuelles et rétrospectives d'équipe",
         ],
-        conclusion: "L'équipe a maintenu un rythme de livraison régulier et le client s'est montré satisfait.",
+        conclusion: "L'équipe a maintenu un **rythme de livraison régulier** et le client s'est montré satisfait.",
         link: '/projects/gecko'
       },
     ],
@@ -494,7 +493,7 @@ export const SKILLS_DATA: Skill[] = [
           "Adaptation des priorités selon les retours client",
           "Remontée structurée des bugs avec documentation claire",
         ],
-        conclusion: "Les échanges fréquents ont permis de valider que les scénarios couvraient bien les besoins, et le client a salué la qualité des rapports et de la communication.",
+        conclusion: "Les échanges fréquents ont permis de valider que les scénarios couvraient bien les besoins, et le **client a salué la qualité des rapports et de la communication**.",
         link: '/projects/wahis'
       },
       {
@@ -506,7 +505,7 @@ export const SKILLS_DATA: Skill[] = [
           "Démonstrations régulières de l'application",
           "Temporisation face aux tensions",
         ],
-        conclusion: "Malgré trois mois de retard et des tensions, j'ai maintenu une relation professionnelle et livré l'application finie, aboutissant à une relation plus sereine.",
+        conclusion: "Malgré trois mois de retard et des tensions, j'ai maintenu une relation professionnelle et livré l'application finie, aboutissant à **une relation plus sereine**.",
         link: '/projects/tsource'
       },
     ],
@@ -562,7 +561,7 @@ export const SKILLS_DATA: Skill[] = [
           "Commentaires pour faciliter la compréhension du code",
           "Revues de code systématiques par le lead développeur",
         ],
-        conclusion: "Toutes mes fonctionnalités ont été intégrées sans régressions dans l'application en production, démontrant la fiabilité du code livré.",
+        conclusion: "Toutes mes fonctionnalités ont été intégrées **sans régressions** dans l'application en production, démontrant la fiabilité du code livré.",
         link: '/projects/gecko'
       },
       {
@@ -575,7 +574,7 @@ export const SKILLS_DATA: Skill[] = [
           "Organisation structurée des fichiers objets, test cases et test suites",
           "Relecture et amélioration continue du code pour le rendre plus robuste",
         ],
-        conclusion: "Le QA qui a repris le projet n'a quasiment plus eu à intervenir sur le code des tests qui sont toujours une assurance de non-régression.",
+        conclusion: "Le QA qui a repris le projet n'a quasiment plus eu à intervenir sur le code des tests qui sont toujours une assurance **de non-régression**.",
         link: '/projects/wahis'
       },
       {
@@ -589,7 +588,7 @@ export const SKILLS_DATA: Skill[] = [
           "Documentation Swagger",
           "Veille et application des bonnes pratiques pour améliorer les standards",
         ],
-        conclusion: "Le projet a été validé avec tous les critères de qualité attendus lors de l'oral.",
+        conclusion: "Le projet a été **validé avec tous les critères de qualité** attendus lors de l'oral.",
         link: '/projects/nowelia'
       },
     ],
@@ -650,7 +649,7 @@ export const SKILLS_DATA: Skill[] = [
           "Priorisation rationnelle des tâches (compte utilisateur → projet → tâches)",
           "Recherches internet ciblées pour débloquer les points techniques simples",
         ],
-        conclusion: "L'organisation rigoureuse a permis de livrer le projet validé du premier coup, prouvant qu'une bonne organisation peut compenser l'absence d'encadrement.",
+        conclusion: "L'organisation rigoureuse a permis de livrer le projet validé du **premier coup**, prouvant qu'une bonne organisation peut compenser l'absence d'encadrement.",
         link: '/projects/mpmt'
       },
       {
@@ -662,7 +661,7 @@ export const SKILLS_DATA: Skill[] = [
           "Recherche de ressources",
           "Reprise et adaptation de code existant dans d'autres projets",
         ],
-        conclusion: "L'application complète a été déployée et utilisée quotidiennement, prouvant ma capacité d'apprentissage rapide malgré la pression.",
+        conclusion: "L'application complète a été déployée et utilisée quotidiennement, prouvant ma **capacité d'apprentissage rapide** malgré la pression.",
         link: '/projects/tsource'
       },
       {
@@ -676,7 +675,7 @@ export const SKILLS_DATA: Skill[] = [
           "Animation des réunions hebdomadaires avec le client",
           "Prise de décisions sur les priorités de testing",
         ],
-        conclusion: "La suite de tests a sécurisé les déploiements puis en TMA, et j'ai assuré une passation complète permettant la continuité du projet.",
+        conclusion: "La suite de tests a **sécurisé les déploiements** puis en TMA, et j'ai assuré une passation complète permettant la continuité du projet.",
         link: '/projects/wahis'
       },
     ],

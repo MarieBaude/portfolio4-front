@@ -97,6 +97,20 @@
   will-change: transform;
 }
 
+.divBtb {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btnMoreWorks {
+  background: var(--color-quaternary);
+  padding: 1rem 1.2rem;
+  border-radius: 50px;
+  color: var(--color-text);
+  font-size: medium;
+}
+
 // Responsive
 @media (max-width: 768px) {
   .projectsGrid {

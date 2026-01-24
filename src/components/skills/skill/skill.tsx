@@ -3,6 +3,7 @@ import "./skill.scss";
 import { SKILLS_DATA } from "~/data/skills/skills.data";
 import { For, Show } from "solid-js";
 import { PROJECTS_DATA } from "~/data/projets/projects.data";
+import { parseFormattedText } from "~/utils/textParser";
 
 export default function Skill() {
   const params = useParams();
@@ -48,10 +49,12 @@ export default function Skill() {
                       </For>
                     </ul>
                     <span>Résultats : </span>
-                    <p class="proofDescription">{proof.conclusion}</p>
-                    <a href={proof.link} target="_blank" rel="noopener noreferrer">
-                      <button class="btnMoreDetails">Plus de détails</button>
-                    </a>
+                    <p class="proofDescription">{parseFormattedText(proof.conclusion)}</p>
+                    <Show when={proof.link}>
+                      <a href={proof.link} target="_blank" rel="noopener noreferrer">
+                        <button class="btnMoreDetails">Plus de détails</button>
+                      </a>
+                    </Show>
                   </div>
                 )}
               </For>

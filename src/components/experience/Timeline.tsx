@@ -6,6 +6,7 @@ import {
 } from "~/data/experience/experience.types";
 import "./Timeline.scss";
 import { PROJECTS_DATA } from "~/data/projets/projects.data";
+import { parseFormattedText } from "~/utils/textParser"
 
 interface TimelineProps {
   items: TimelineItem[];
@@ -64,24 +65,6 @@ export default function Timeline(props: TimelineProps) {
               ×
             </button>
             <h2>{selectedItem()!.title}</h2>
-
-            {/* <a href={selectedItem()!.websiteUrl} target="_blank">
-              <div class="popup-details">
-                <Show when={selectedItem()!.logo}>
-                  <img
-                    src={selectedItem()!.logo}
-                    alt={selectedItem()!.campany}
-                  />
-                </Show>
-                <div>
-                  <p>
-                    <strong>{selectedItem()!.campany}</strong>
-                  </p>
-                  <p>{selectedItem()!.date}</p>
-                  <p>{selectedItem()!.city}</p>
-                </div>
-              </div>
-            </a> */}
 
             <Show
               when={selectedItem()!.websiteUrl}
@@ -142,7 +125,7 @@ export default function Timeline(props: TimelineProps) {
                         (selectedItem() as WorkTimelineItem).responsabilities
                       }
                     >
-                      {(responsability) => <li>{responsability}</li>}
+                      {(responsability) => <li>{parseFormattedText(responsability)}</li>}
                     </For>
                   </ul>
                 </div>
@@ -151,7 +134,7 @@ export default function Timeline(props: TimelineProps) {
                   <h3>Détail des missions</h3>
                   <ul class="details-list">
                     <For each={(selectedItem() as WorkTimelineItem).missions}>
-                      {(mission) => <li>{mission}</li>}
+                      {(mission) => <li>{parseFormattedText(mission)}</li>}
                     </For>
                   </ul>
                 </div>
@@ -238,17 +221,18 @@ export default function Timeline(props: TimelineProps) {
                   <div class="detail-section">
                     <h3>À propos de l'établissement</h3>
                     <p>
-                      {
-                        (selectedItem() as EducationTimelineItem)
-                          .institutionDescription
-                      }
+                      {parseFormattedText(
+                        (selectedItem() as EducationTimelineItem).institutionDescription
+                      )}
                     </p>
                   </div>
 
                   <div class="detail-section">
                     <h3>Mon regard sur la pédagogie</h3>
                     <p class="pedagogy">
-                      {(selectedItem() as EducationTimelineItem).pedagogyVision}
+                      {parseFormattedText(
+                        (selectedItem() as EducationTimelineItem).pedagogyVision
+                      )}
                     </p>
                   </div>
                 </div>

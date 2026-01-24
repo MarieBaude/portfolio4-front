@@ -12,9 +12,9 @@ export const TIMELINE_DATA: TimelineItem[] = [
     campany: "POP School",
     logo: "/images/experience/popschool.png",
     institutionDescription:
-      "Pop School est un organisme de formation intensive dans le domaine de l'informatique. La formation que j'ai suivie couvrait l'équivalent du volume horaire informatique d'un DUT, sans les matières générales.",
+      "Pop School est un organisme de formation intensive dans le domaine de l'informatique. La formation que j'ai suivie couvrait l'équivalent du **volume horaire informatique d'un DUT**, sans les matières générales.",
     pedagogyVision:
-      "La pédagogie de Pop School alterne entre cours théoriques courts et projets pratiques. Cette approche permet une montée en compétences rapide et concentrée sur l'essentiel du métier.",
+      "La pédagogie de Pop School alterne entre cours **théoriques courts et projets pratiques**. Cette approche permet une montée en compétences rapide et concentrée sur l'essentiel du métier.",
     websiteUrl: "https://www.pop.eu.com/pop-school/",
     position: "right",
     icon: SchoolIcon,
@@ -29,9 +29,9 @@ export const TIMELINE_DATA: TimelineItem[] = [
     campany: "Simplon",
     logo: "/images/experience/Logo_simplon.co.svg.png",
     institutionDescription:
-      "Simplon est un réseau de formations aux métiers du numérique, reconnu pour sa pédagogie inclusive et orientée vers l'insertion professionnelle. Les formations ont une forte dimension projet.",
+      "Simplon est un réseau de formations aux métiers du numérique, reconnu pour sa pédagogie inclusive et orientée vers **l'insertion professionnelle**. Les formations ont une forte dimension projet.",
     pedagogyVision:
-      "La pédagogie Simplon repose sur le principe \"apprendre à apprendre\" et met la pratique au cœur de la formation. L'immersion dans des situations professionnelles réelles, les cas concrets d'entreprises et les projets en équipe permettent d'acquérir les compétences attendues tout en développant l'autonomie et une capacité d'adaptation.",
+      "La pédagogie Simplon repose sur le principe **\"apprendre à apprendre\"** et met la pratique au cœur de la formation. L'immersion dans des situations professionnelles réelles, les cas concrets d'entreprises et les projets en équipe permettent d'acquérir les compétences attendues tout en développant l'autonomie et une capacité d'adaptation.",
     websiteUrl: "https://simplon.co",
     position: "right",
     icon: SchoolIcon,
@@ -53,11 +53,11 @@ export const TIMELINE_DATA: TimelineItem[] = [
     status: "Stagiaire",
     missions: [
       "Création des wireframes et maquettes interactives pour valider l'expérience utilisateur",
-      "Réalisation des diagrammes UML (Cas d'utilisation, Classes, Séquences) pour la modélisation",
-      "Gestion de projet en Agile Scrum",
+      "Réalisation des diagrammes **UML** (Cas d'utilisation, Classes, Séquences) pour la modélisation",
+      "Gestion de projet en Agile **Scrum**",
       "Rédaction d'un cahier des charges pour un e-commerce",
-      "Développement d'une application backend avec le framework NestJS et une base de données PostgreSQL",
-      "Implémentation des interfaces frontend en utilisant le moteur de templates PUG et le framework CSS TailwindCSS",
+      "Développement d'une application **backend** avec le framework NestJS et une base de données PostgreSQL",
+      "Implémentation des interfaces frontend en utilisant le moteur de **templates PUG** et le framework CSS TailwindCSS",
     ],
     achievements: [
       { title: "Fadmarts (Projet non présenté)" },
@@ -76,7 +76,7 @@ export const TIMELINE_DATA: TimelineItem[] = [
     campany: "ISCOD",
     logo: "/images/experience/iscod_logo.jpg",
     institutionDescription:
-      "L'ISCOD est une école en ligne spécialisée dans les formations en alternance, délivrant des certifications RNCP reconnues par l'État. L'établissement propose des rentrées décalées tout au long de l'année et un rythme d'apprentissage modulable adapté aux contraintes de l'alternance.",
+      "L'ISCOD est une école en ligne spécialisée dans les formations en **alternance**, délivrant des certifications RNCP reconnues par l'État. L'établissement propose des rentrées décalées tout au long de l'année et un rythme d'apprentissage modulable adapté aux contraintes de l'alternance.",
     pedagogyVision:
       "La pédagogie ISCOD privilégie l'autonomie en distanciel avec des supports variés (vidéos, projets, exercices). L'approche \"un peu de théorie pour beaucoup de pratique\" s'adapte parfaitement au rythme de l'alternance. L'enseignement personnalisé et le Learning Coach disponible permettent d'avancer à son rythme tout en bénéficiant d'un accompagnement qualitatif.",
     websiteUrl: "https://iscod.fr",
@@ -100,7 +100,7 @@ export const TIMELINE_DATA: TimelineItem[] = [
     status: "Alternance",
     missions: [
       "Conception, écriture et exécution de tests automatisés",
-      "Développement full-stack de nouvelles fonctionnalités et résolution de bugs",
+      "Développement **full-stack** de nouvelles fonctionnalités et résolution de bugs",
       "Participer aux rituels d’une équipe projet en méthodologie agile",
       "Contribuer aux échanges avec le client, en présentant les avancements et en participant au support"
     ],
