@@ -65,7 +65,7 @@ export default function Timeline(props: TimelineProps) {
             </button>
             <h2>{selectedItem()!.title}</h2>
 
-            <a href={selectedItem()!.websiteUrl} target="_blank">
+            {/* <a href={selectedItem()!.websiteUrl} target="_blank">
               <div class="popup-details">
                 <Show when={selectedItem()!.logo}>
                   <img
@@ -81,7 +81,48 @@ export default function Timeline(props: TimelineProps) {
                   <p>{selectedItem()!.city}</p>
                 </div>
               </div>
-            </a>
+            </a> */}
+
+            <Show
+              when={selectedItem()!.websiteUrl}
+              fallback={
+                <div class="popup-details no-link">
+                  <Show when={selectedItem()!.logo}>
+                    <img
+                      src={selectedItem()!.logo}
+                      alt={selectedItem()!.campany}
+                    />
+                  </Show>
+                  <div>
+                    <p>
+                      <strong>{selectedItem()!.campany}</strong>
+                    </p>
+                    <p>{selectedItem()!.date}</p>
+                    <p>{selectedItem()!.city}</p>
+                  </div>
+                  <span class="no-link-badge">Pas de site web</span>
+                </div>
+              }
+            >
+              <a href={selectedItem()!.websiteUrl} target="_blank">
+                <div class="popup-details">
+                  <Show when={selectedItem()!.logo}>
+                    <img
+                      src={selectedItem()!.logo}
+                      alt={selectedItem()!.campany}
+                    />
+                  </Show>
+                  <div>
+                    <p>
+                      <strong>{selectedItem()!.campany}</strong>
+                    </p>
+                    <p>{selectedItem()!.date}</p>
+                    <p>{selectedItem()!.city}</p>
+                  </div>
+                </div>
+              </a>
+            </Show>
+
             <Show when={isWorkItem(selectedItem()!)}>
               <div class="work-details">
                 <Show when={(selectedItem() as WorkTimelineItem).status}>
