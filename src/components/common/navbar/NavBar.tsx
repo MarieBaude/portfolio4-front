@@ -1,10 +1,10 @@
-// ~/components/NavBar/NavBar.tsx
-import { createSignal, Show, For } from "solid-js";
+import { createSignal, Show, For, onMount, onCleanup } from "solid-js";
 import { useNavigate } from "@solidjs/router";
 import "./NavBar.scss";
 
 export default function NavBar() {
   const navigate = useNavigate();
+  let navRef: HTMLElement | undefined;
   
   const [isMenuOpen, setIsMenuOpen] = createSignal(false);
   const [isSkillsOpen, setIsSkillsOpen] = createSignal(false);
@@ -31,15 +31,35 @@ export default function NavBar() {
     { href: "/projects/gecko", label: "Gecko" },
   ];
 
-  const goTo = (href: string) => {
-    setIsMenuOpen(false);
+  const closeAllSubMenus = () => {
     setIsSkillsOpen(false);
     setIsProjectsOpen(false);
+  };
+
+  const goTo = (href: string) => {
+    setIsMenuOpen(false);
+    closeAllSubMenus();
     navigate(href);
   };
 
+  // Fermer les sous-menus quand on clique en dehors
+  onMount(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (navRef && !navRef.contains(e.target as Node)) {
+        setIsMenuOpen(false);
+        closeAllSubMenus();
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    
+    onCleanup(() => {
+      document.removeEventListener("click", handleClickOutside);
+    });
+  });
+
   return (
-    <nav class="navbar">
+    <nav class="navbar" ref={navRef}>
       {/* Brand */}
       <a href="/" onClick={(e) => { e.preventDefault(); goTo("/"); }}>
         <div class="navText">
@@ -72,9 +92,16 @@ export default function NavBar() {
 
         {/* Compétences */}
         <li class="subMenu">
-          <div class="subMenu-header" onClick={() => setIsSkillsOpen(!isSkillsOpen())}>
+          <div 
+            class="subMenu-header" 
+            onClick={(e) => { 
+              e.stopPropagation(); 
+              setIsProjectsOpen(false);
+              setIsSkillsOpen(!isSkillsOpen()); 
+            }}
+          >
             <span>Compétences</span>
-            <svg class={`icon ${isSkillsOpen() ? "open" : ""}`} xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <svg class={`icon ${isSkillsOpen() ? "open" : ""}`} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path d="M7 10l5 5 5-5z" />
             </svg>
           </div>
@@ -100,9 +127,16 @@ export default function NavBar() {
 
         {/* Projets */}
         <li class="subMenu">
-          <div class="subMenu-header" onClick={() => setIsProjectsOpen(!isProjectsOpen())}>
+          <div 
+            class="subMenu-header" 
+            onClick={(e) => { 
+              e.stopPropagation(); 
+              setIsSkillsOpen(false);
+              setIsProjectsOpen(!isProjectsOpen()); 
+            }}
+          >
             <span>Projets</span>
-            <svg class={`icon ${isProjectsOpen() ? "open" : ""}`} xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <svg class={`icon ${isProjectsOpen() ? "open" : ""}`} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path d="M7 10l5 5 5-5z" />
             </svg>
           </div>
